@@ -552,6 +552,7 @@ MonoBehaviour:
   health: 120
   explosion: {fileID: 0}
   crh: 0
+  coin: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
 --- !u!54 &2893929286400679095
 Rigidbody:
   m_ObjectHideFlags: 0

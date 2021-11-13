@@ -842,6 +842,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7475035583871908842, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
+      propertyPath: coin
+      value: 
+      objectReference: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
     - target: {fileID: 8272943599223628453, guid: 47b41978aba272c47ae5f4a2f7179c61, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -981,6 +985,7 @@ GameObject:
   - component: {fileID: 507134531}
   - component: {fileID: 507134532}
   - component: {fileID: 507134533}
+  - component: {fileID: 507134534}
   m_Layer: 0
   m_Name: FirstPersonPlayer
   m_TagString: Untagged
@@ -1080,6 +1085,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &507134534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507134528}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.89, y: 3.5, z: 4.06}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &522897482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f867a2534aa85914d9e6b62f681cdf69, type: 3}

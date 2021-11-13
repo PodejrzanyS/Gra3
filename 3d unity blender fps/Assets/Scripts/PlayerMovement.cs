@@ -16,13 +16,14 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
 
     public LayerMask groundMask;
+    int coins;
 
     Vector3 velocity;
     bool isGrounded;
 
         // Update is called once per frame
         void Update()
-    {
+        {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -51,5 +52,17 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(velocity * Time.deltaTime);
 
         
+        }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("dupa");
+        if (other.transform.gameObject.tag == "gold")
+        {
+            int addcoins = Random.Range(1, 5);
+            coins = coins + addcoins;
+            Destroy(other.gameObject);
+            Debug.Log(coins);
+        }
     }
 }
