@@ -10,8 +10,13 @@ public class Enemy : MonoBehaviour
     float moveSpeed;
     Vector3 directionToTarget;
     public GameObject explosion;
+    public int crh;
+    Animator animator;
+
+
     void Start()
     {
+        animator = GetComponent<Animator>();
         target = GameObject.Find("Drzewo");
         rb = GetComponent<Rigidbody>();
         moveSpeed = Random.Range(1f, 5f);
@@ -20,9 +25,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        crh =GetComponent<Health>().currentHealth;
         MoveMonster();
 
-        if (health <= 0)
+        if (crh <= 0)
         {
             Die();
         }
@@ -30,13 +36,14 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Destroy(this.gameObject);
+        StartCoroutine(ExampleCoroutine());
     }
 
     void MoveMonster()
     {
-        if (target != null)
+        if ((target != null) && crh > 0)
         {
+            animator.SetBool("isRunning", true);
             directionToTarget = (target.transform.position - transform.position).normalized;
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
             transform.LookAt(target.transform.position);
@@ -44,8 +51,14 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-         
+            animator.SetBool("isRunning", false);
             rb.velocity = Vector3.zero;
         }
+    }
+    IEnumerator ExampleCoroutine()
+    {
+        animator.SetBool("isDead", true);
+        yield return new WaitForSeconds(3f);
+        Destroy(this.gameObject);
     }
 }

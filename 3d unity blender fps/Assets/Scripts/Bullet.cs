@@ -5,10 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float aliveTime;
-    public float damage;
     public float moveSpeed;
 
-    private GameObject enemyTriggered;
 
    // public GameObject bulletSpawn;
     void Start()
@@ -30,10 +28,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            enemyTriggered = other.gameObject;
-            enemyTriggered.GetComponent<Enemy>().health -= damage;
             Destroy(this.gameObject);
-            Debug.Log("cyk");
         }
     }
 }
