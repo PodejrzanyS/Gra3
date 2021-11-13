@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public GameObject explosion;
     public int crh;
     Animator animator;
+    bool wylaczony = false;
 
 
     void Start()
@@ -30,12 +31,22 @@ public class Enemy : MonoBehaviour
 
         if (crh <= 0)
         {
+            WylaczCollider();
             Die();
         }
     }
-
+    void WylaczCollider()
+    {
+        if (wylaczony == false)
+        {
+            Collider kolider = GetComponent<Collider>();
+            kolider.enabled = !kolider.enabled;
+            wylaczony = true;
+        }
+    }
     public void Die()
     {
+        
         StartCoroutine(ExampleCoroutine());
     }
 
@@ -57,6 +68,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator ExampleCoroutine()
     {
+        
         animator.SetBool("isDead", true);
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
