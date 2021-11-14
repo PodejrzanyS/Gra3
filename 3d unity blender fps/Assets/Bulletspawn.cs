@@ -19,6 +19,7 @@ public class Bulletspawn : MonoBehaviour
     public Text ammo;
     public Text weapon;
     public Animator weaponAnimation;
+    public Camera kamera;
 
     void Start()
     {
@@ -39,6 +40,32 @@ public class Bulletspawn : MonoBehaviour
     }
     void Update()
     {
+        if (shakeDuration > 0)
+        {
+            camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+
+            shakeDuration -= Time.deltaTime * decreaseFactor;
+        }
+        else
+        {
+            shakeDuration = 0f;
+            camTransform.localPosition = originalPos;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0)
         {
             animator.SetBool("isFire", true);
@@ -48,10 +75,12 @@ public class Bulletspawn : MonoBehaviour
         if (Input.GetMouseButton(1) && weaponAnimation.GetBool("scoping") == false)
         {
             weaponAnimation.SetBool("scoping", true);
+            kamera.fieldOfView = 20;
         }
         else if(Input.GetMouseButtonUp(1) && weaponAnimation.GetBool("scoping") == true)
         {
             weaponAnimation.SetBool("scoping", false);
+            kamera.fieldOfView = 60;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -82,11 +111,63 @@ public class Bulletspawn : MonoBehaviour
     {
         canShoot = false;
         currentAmmo--;
+        OnEnable();
+        weaponAnimation.SetTrigger("shooting");
         WyswietlanieAmmoUI();
         GameObject bulletInstance = Instantiate(bulletPrefab, shootPos.position, shootPos.rotation);
         bulletInstance.GetComponent<Rigidbody>().AddForce(shootForce * shootPos.up, ForceMode.Impulse);
         // bulletInstance.transform.SetPositionAndRotation(shootPos.position, shootPos.rotation);
         yield return new WaitForSeconds(shootInterval);
         canShoot = true;
-    } 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Transform of the camera to shake. Grabs the gameObject's transform
+    // if null.
+    public Transform camTransform;
+
+    // How long the object should shake for.
+    public float shakeDuration;
+
+    // Amplitude of the shake. A larger value shakes the camera harder.
+    public float shakeAmount;
+    public float decreaseFactor;
+
+    Vector3 originalPos;
+
+    void Awake()
+    {
+        if (camTransform == null)
+        {
+            camTransform = GetComponent(typeof(Transform)) as Transform;
+        }
+    }
+
+    void OnEnable()
+    {
+        shakeDuration += 0.1f;
+        originalPos = camTransform.localPosition;
+    }
+
 }
