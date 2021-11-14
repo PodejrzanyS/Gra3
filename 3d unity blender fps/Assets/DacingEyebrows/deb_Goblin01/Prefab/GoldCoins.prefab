@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4521874486784168}
   - component: {fileID: 33018419469632608}
   - component: {fileID: 23458456864992360}
-  - component: {fileID: 9004191723670406611}
-  - component: {fileID: 7760692233110725808}
+  - component: {fileID: 5403677800366104190}
+  - component: {fileID: 1752228777572419366}
   m_Layer: 0
   m_Name: GoldCoins
   m_TagString: gold
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9004191723670406611
-MeshCollider:
+--- !u!65 &5403677800366104190
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,11 +94,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 83c43ff4797616741b9121073c7d1191, type: 3}
---- !u!54 &7760692233110725808
+  serializedVersion: 2
+  m_Size: {x: 0.058852464, y: 0.020218275, z: 0.06506889}
+  m_Center: {x: 0.0032892236, y: 0.010496559, z: 0.0014966959}
+--- !u!54 &1752228777572419366
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,5 +111,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0

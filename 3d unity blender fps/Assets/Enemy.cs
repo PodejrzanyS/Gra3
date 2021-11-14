@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isDead", true);
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
-        Vector3 tp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+2, gameObject.transform.position.z);
+        Vector3 tp = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+1, gameObject.transform.position.z);
         Instantiate(coin, tp, Quaternion.identity);
     }
 }

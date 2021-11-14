@@ -56,13 +56,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("dupa");
         if (other.transform.gameObject.tag == "gold")
         {
             int addcoins = Random.Range(1, 5);
             coins = coins + addcoins;
             Destroy(other.gameObject);
-            Debug.Log(coins);
+            Debug.Log("Coinsy:" + coins);
         }
     }
 }
