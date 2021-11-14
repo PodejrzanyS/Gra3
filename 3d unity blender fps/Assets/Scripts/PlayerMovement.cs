@@ -20,12 +20,14 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask groundMask;
     int coins;
+    bool nearby;
 
     Vector3 velocity;
     bool isGrounded;
 
     void Start()
     {
+ 
         coins = PlayerPrefs.GetInt("coins", 0);
     }
     void Update()
@@ -58,7 +60,9 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
         text1.text = "Coinsy:" + coins;
 
+
     }
+
 
     void OnCollisionEnter(Collision other)
     {
@@ -71,4 +75,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Coinsy:" + coins);
         }
     }
+
+    
 }
