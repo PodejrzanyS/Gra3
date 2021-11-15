@@ -10,7 +10,7 @@ public class Bulletspawn : MonoBehaviour
     public Transform shootPos;
     Animator animator;
 
-    bool canShoot = true;
+    public bool canShoot = true;
 
     public int currentAmmo;
     public int allAmmo;
@@ -20,6 +20,8 @@ public class Bulletspawn : MonoBehaviour
     public Text weapon;
     public Animator weaponAnimation;
     public Camera kamera;
+    public ParticleSystem blyskStrzalu;
+
 
     void Start()
     {
@@ -51,6 +53,7 @@ public class Bulletspawn : MonoBehaviour
             shakeDuration = 0f;
             camTransform.localPosition = originalPos;
         }
+        
 
 
 
@@ -65,8 +68,7 @@ public class Bulletspawn : MonoBehaviour
 
 
 
-
-        if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0)
+        if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0 && noShootingWhileReloading.shootinggg == true)
         {
             animator.SetBool("isFire", true);
             StartCoroutine(Shoot());
@@ -92,18 +94,20 @@ public class Bulletspawn : MonoBehaviour
                 currentAmmo += brakujaceAmmo;
                 allAmmo -= brakujaceAmmo;
                 weaponAnimation.SetTrigger("przeladowac");
+                noShootingWhileReloading.shootinggg = false;
             }
             else
             {
                 currentAmmo += allAmmo;
                 allAmmo = 0;
                 weaponAnimation.SetTrigger("przeladowac");
+                noShootingWhileReloading.shootinggg = false;
             }
             WyswietlanieAmmoUI();
         }
     }
 
-    void WyswietlanieAmmoUI()
+    public void WyswietlanieAmmoUI()
     {
         ammo.text = currentAmmo + " / " + allAmmo;
     }
@@ -112,6 +116,7 @@ public class Bulletspawn : MonoBehaviour
         canShoot = false;
         currentAmmo--;
         OnEnable();
+        blyskStrzalu.Play();
         weaponAnimation.SetTrigger("shooting");
         WyswietlanieAmmoUI();
         GameObject bulletInstance = Instantiate(bulletPrefab, shootPos.position, shootPos.rotation);

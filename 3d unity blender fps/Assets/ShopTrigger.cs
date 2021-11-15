@@ -10,6 +10,8 @@ public class ShopTrigger : MonoBehaviour
     public bool isOpen;
     public bool isPlayerNearby;
     public GameObject textShop;
+    public GameObject sensitivity;
+    public GameObject gracz;
 
     void Start()
     {
@@ -17,6 +19,13 @@ public class ShopTrigger : MonoBehaviour
         shopUI.SetActive(false);
         isOpen = false;
         isPlayerNearby = false;
+    }
+
+    public void KupAmmo()
+    {
+        gracz.GetComponent<Bulletspawn>().allAmmo += 100;
+        gracz.GetComponent<Bulletspawn>().WyswietlanieAmmoUI();
+        gracz.GetComponent<PlayerMovement>().coins -= 10;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -44,17 +53,26 @@ public class ShopTrigger : MonoBehaviour
         {
             shopUI.SetActive(true);
             isOpen = true;
+            Cursor.lockState = CursorLockMode.None;
+            MouseLook.CurrentMouseSensitivity = 0f;
+            gracz.GetComponent<Bulletspawn>().canShoot = false;
         }
         else if (isPlayerNearby && Input.GetKeyDown(KeyCode.E) && isOpen == true)
         {
             shopUI.SetActive(false);
             isOpen = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            sensitivity.GetComponent<MouseLook>().wrocSensitivity();
+            gracz.GetComponent<Bulletspawn>().canShoot = true;
         }
 
         if(!isPlayerNearby && isOpen == true)
         {
             shopUI.SetActive(false);
             isOpen = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            sensitivity.GetComponent<MouseLook>().wrocSensitivity();
+            gracz.GetComponent<Bulletspawn>().canShoot = true;
         }
     }
 }

@@ -6,7 +6,8 @@ public class MouseLook : MonoBehaviour
 {
 
 
-    public float mouseSensitivity = 1f;
+    static public float CurrentMouseSensitivity;
+    public float mouseSensitivity;
     public Transform playerBody;
 
     float xRotation = 0f;
@@ -14,13 +15,17 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        wrocSensitivity();
     }
 
-    // Update is called once per frame
+    public void wrocSensitivity()
+    {
+        CurrentMouseSensitivity = mouseSensitivity;
+    }
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity ;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity ;
+        float mouseX = Input.GetAxis("Mouse X") * CurrentMouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * CurrentMouseSensitivity;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

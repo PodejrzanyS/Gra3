@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
 
     public LayerMask groundMask;
-    int coins;
+    public int coins;
     bool nearby;
 
     Vector3 velocity;
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             coins = coins + addcoins;
             PlayerPrefs.SetInt("coins", coins);
             Destroy(other.gameObject);
-            Debug.Log("Coinsy:" + coins);
+            Debug.Log("Coinsy: " + coins);
         }
     }
 
