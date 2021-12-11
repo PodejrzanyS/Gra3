@@ -10,6 +10,7 @@ public class HealthDrzewo : MonoBehaviour
     public int damage;
     public int currentHealth;
     private GameObject enemyTriggered;
+    public GameObject manager;
 
     public event Action<float> OnHealthPctChanged = delegate { };
 
@@ -37,6 +38,7 @@ public class HealthDrzewo : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            manager.GetComponent<Manager>().End();
         }
     }
     public void Die()
