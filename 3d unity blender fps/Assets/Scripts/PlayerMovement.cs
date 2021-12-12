@@ -55,6 +55,15 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 20f;
+        }
+        else
+        {
+            speed = 12f;
+        }
+
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
