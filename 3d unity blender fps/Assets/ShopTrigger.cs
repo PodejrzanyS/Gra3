@@ -12,6 +12,7 @@ public class ShopTrigger : MonoBehaviour
     public GameObject textShop;
     public GameObject sensitivity;
     public GameObject gracz;
+    public GameObject drzewo;
 
     void Start()
     {
@@ -26,6 +27,15 @@ public class ShopTrigger : MonoBehaviour
         gracz.GetComponent<Bulletspawn>().allAmmo += 100;
         gracz.GetComponent<Bulletspawn>().WyswietlanieAmmoUI();
         gracz.GetComponent<PlayerMovement>().coins -= 10;
+    }
+    public void KupHealth()
+    {
+        if(drzewo.GetComponent<HealthDrzewo>().currentHealth < 100)
+        {
+            drzewo.GetComponent<HealthDrzewo>().ModifyHealth(10);
+            gracz.GetComponent<PlayerMovement>().coins -= 20;
+
+        }
     }
 
     public void OnTriggerEnter(Collider other)
