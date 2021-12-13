@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
     public Text text;
+    int clicked = 0;
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
     [System.Serializable]
     public class Wave
@@ -58,11 +59,20 @@ public class WaveSpawner : MonoBehaviour
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
-        else
+        else if (clicked == 1 && waveCountdown >= 0)
         {
+            clicked = 1;
             waveCountdown -= Time.deltaTime;
             SetCD();
 
+        }
+        if (waveCountdown >= 0 && clicked == 0)
+        {
+            text.text = "Click F to start a new wave";
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                clicked = 1;
+            }
         }
 
     }
@@ -74,6 +84,7 @@ public class WaveSpawner : MonoBehaviour
         if (nextWave+1 > waves.Length -1)
         {
             nextWave = 0;
+            clicked = 0;
             Debug.Log("all waves completed now looping");
         }else
         {
@@ -90,7 +101,7 @@ public class WaveSpawner : MonoBehaviour
         {
             searchCountdown = 1f;
             if (GameObject.FindGameObjectWithTag("Enemy") == null)
-            {
+            { 
                 return false;
             }
         }
