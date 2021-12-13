@@ -24,13 +24,16 @@ public class ShopTrigger : MonoBehaviour
 
     public void KupAmmo()
     {
-        gracz.GetComponent<Bulletspawn>().allAmmo += 100;
-        gracz.GetComponent<Bulletspawn>().WyswietlanieAmmoUI();
-        gracz.GetComponent<PlayerMovement>().coins -= 10;
+        if(gracz.GetComponent<PlayerMovement>().coins >= 10)
+        {
+            gracz.GetComponent<Bulletspawn>().allAmmo += 100;
+            gracz.GetComponent<Bulletspawn>().WyswietlanieAmmoUI();
+            gracz.GetComponent<PlayerMovement>().coins -= 10;
+        }
     }
     public void KupHealth()
     {
-        if(drzewo.GetComponent<HealthDrzewo>().currentHealth < 100)
+        if(drzewo.GetComponent<HealthDrzewo>().currentHealth < 100 && gracz.GetComponent<PlayerMovement>().coins >= 20)
         {
             drzewo.GetComponent<HealthDrzewo>().ModifyHealth(10);
             gracz.GetComponent<PlayerMovement>().coins -= 20;
