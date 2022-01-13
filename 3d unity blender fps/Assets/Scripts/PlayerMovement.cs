@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 
 public class PlayerMovement : MonoBehaviour
 {
+    PhotonView view;
     public CharacterController controller;
     public float speed = 12f;
     public Text text1;
@@ -27,46 +29,51 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
- 
+        view = GetComponent<PhotonView>();
         coins = PlayerPrefs.GetInt("coins", 0);
     }
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGrounded && velocity.y < 0)
-        {
-
-            velocity.y = -2f;
 
 
-        }
+       
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+            if (isGrounded && velocity.y < 0)
+            {
 
-        Vector3 move = transform.right * x + transform.forward * z;
+                velocity.y = -2f;
 
-        controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
 
-        }
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = 20f;
-        }
-        else
-        {
-            speed = 12f;
-        }
+            Vector3 move = transform.right * x + transform.forward * z;
 
-        velocity.y += gravity * Time.deltaTime;
+            controller.Move(move * speed * Time.deltaTime);
+
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = 20f;
+            }
+            else
+            {
+                speed = 12f;
+            }
+
+        
+        
 
         controller.Move(velocity * Time.deltaTime);
+        velocity.y += gravity * Time.deltaTime;
         text1.text = "Coinsy:" + coins;
 
 
@@ -85,5 +92,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+
 }
