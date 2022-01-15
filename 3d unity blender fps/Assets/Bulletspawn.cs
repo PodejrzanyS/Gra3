@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Photon.Pun;
+
 public class Bulletspawn : MonoBehaviour
 {
     public GameObject bulletPrefab;
@@ -21,11 +21,10 @@ public class Bulletspawn : MonoBehaviour
     public Animator weaponAnimation;
     public Camera kamera;
     public ParticleSystem blyskStrzalu;
-    PhotonView view;
+
 
     void Start()
     {
-        view = GetComponent<PhotonView>();
         animator = GetComponent<Animator>();
 
         //przykladowe wartosci do testu broni
@@ -54,62 +53,58 @@ public class Bulletspawn : MonoBehaviour
             shakeDuration = 0f;
             camTransform.localPosition = originalPos;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
         
 
-            if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0 && noShootingWhileReloading.shootinggg == true)
-            {
-                animator.SetBool("isFire", true);
-                StartCoroutine(Shoot());
-            }
 
-            if (Input.GetMouseButton(1) && weaponAnimation.GetBool("scoping") == false)
-            {
-                weaponAnimation.SetBool("scoping", true);
-                kamera.fieldOfView = 20;
-            }
-            else if (Input.GetMouseButtonUp(1) && weaponAnimation.GetBool("scoping") == true)
-            {
-                weaponAnimation.SetBool("scoping", false);
-                kamera.fieldOfView = 60;
-            }
 
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                int brakujaceAmmo;
-                brakujaceAmmo = magazineSizeAmmo - currentAmmo;
-                if (allAmmo >= brakujaceAmmo)
-                {
-                    currentAmmo += brakujaceAmmo;
-                    allAmmo -= brakujaceAmmo;
-                    weaponAnimation.SetTrigger("przeladowac");
-                    noShootingWhileReloading.shootinggg = false;
-                }
-                else
-                {
-                    currentAmmo += allAmmo;
-                    allAmmo = 0;
-                    weaponAnimation.SetTrigger("przeladowac");
-                    noShootingWhileReloading.shootinggg = false;
-                }
-            
+
+
+
+
+
+
+
+
+
+
+
+        if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0 && noShootingWhileReloading.shootinggg == true)
+        {
+            animator.SetBool("isFire", true);
+            StartCoroutine(Shoot());
         }
-                WyswietlanieAmmoUI();
-            
-        
-        
+
+        if (Input.GetMouseButton(1) && weaponAnimation.GetBool("scoping") == false)
+        {
+            weaponAnimation.SetBool("scoping", true);
+            kamera.fieldOfView = 20;
+        }
+        else if(Input.GetMouseButtonUp(1) && weaponAnimation.GetBool("scoping") == true)
+        {
+            weaponAnimation.SetBool("scoping", false);
+            kamera.fieldOfView = 60;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            int brakujaceAmmo;
+            brakujaceAmmo = magazineSizeAmmo - currentAmmo;
+            if (allAmmo >= brakujaceAmmo)
+            {
+                currentAmmo += brakujaceAmmo;
+                allAmmo -= brakujaceAmmo;
+                weaponAnimation.SetTrigger("przeladowac");
+                noShootingWhileReloading.shootinggg = false;
+            }
+            else
+            {
+                currentAmmo += allAmmo;
+                allAmmo = 0;
+                weaponAnimation.SetTrigger("przeladowac");
+                noShootingWhileReloading.shootinggg = false;
+            }
+            WyswietlanieAmmoUI();
+        }
     }
 
     public void WyswietlanieAmmoUI()
