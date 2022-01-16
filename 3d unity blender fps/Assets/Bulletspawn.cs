@@ -21,6 +21,12 @@ public class Bulletspawn : MonoBehaviour
     public Animator weaponAnimation;
     public Camera kamera;
     public ParticleSystem blyskStrzalu;
+    public int bron;
+    public GameObject ak47;
+    public GameObject noz;
+    public bool canStab;
+    bool canstabdamage;
+    public Animator nozAnimator;
 
 
     void Start()
@@ -53,7 +59,6 @@ public class Bulletspawn : MonoBehaviour
             shakeDuration = 0f;
             camTransform.localPosition = originalPos;
         }
-        
 
 
 
@@ -64,52 +69,102 @@ public class Bulletspawn : MonoBehaviour
 
 
 
-
-
-
-
-        if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0 && noShootingWhileReloading.shootinggg == true)
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            animator.SetBool("isFire", true);
-            StartCoroutine(Shoot());
+            bron = 3;
+            noz.SetActive(true);
+            ak47.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            bron = 1;
+            noz.SetActive(false);
+            ak47.SetActive(true);
         }
 
-        if (Input.GetMouseButton(1) && weaponAnimation.GetBool("scoping") == false)
-        {
-            weaponAnimation.SetBool("scoping", true);
-            kamera.fieldOfView = 20;
-        }
-        else if(Input.GetMouseButtonUp(1) && weaponAnimation.GetBool("scoping") == true)
-        {
-            weaponAnimation.SetBool("scoping", false);
-            kamera.fieldOfView = 60;
-        }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (bron == 1)
         {
-            int brakujaceAmmo;
-            brakujaceAmmo = magazineSizeAmmo - currentAmmo;
-            if (allAmmo >= brakujaceAmmo)
+            canStab = false;
+            if (Input.GetMouseButton(0) && canShoot == true && currentAmmo > 0 && noShootingWhileReloading.shootinggg == true)
             {
-                currentAmmo += brakujaceAmmo;
-                allAmmo -= brakujaceAmmo;
-                weaponAnimation.SetTrigger("przeladowac");
-                noShootingWhileReloading.shootinggg = false;
+                animator.SetBool("isFire", true);
+                StartCoroutine(Shoot());
             }
-            else
+
+            if (Input.GetMouseButton(1) && weaponAnimation.GetBool("scoping") == false)
             {
-                currentAmmo += allAmmo;
-                allAmmo = 0;
-                weaponAnimation.SetTrigger("przeladowac");
-                noShootingWhileReloading.shootinggg = false;
+                weaponAnimation.SetBool("scoping", true);
+                kamera.fieldOfView = 20;
             }
-            WyswietlanieAmmoUI();
+            else if (Input.GetMouseButtonUp(1) && weaponAnimation.GetBool("scoping") == true)
+            {
+                weaponAnimation.SetBool("scoping", false);
+                kamera.fieldOfView = 60;
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                int brakujaceAmmo;
+                brakujaceAmmo = magazineSizeAmmo - currentAmmo;
+                if (allAmmo >= brakujaceAmmo)
+                {
+                    currentAmmo += brakujaceAmmo;
+                    allAmmo -= brakujaceAmmo;
+                    weaponAnimation.SetTrigger("przeladowac");
+                    noShootingWhileReloading.shootinggg = false;
+                }
+                else
+                {
+                    currentAmmo += allAmmo;
+                    allAmmo = 0;
+                    weaponAnimation.SetTrigger("przeladowac");
+                    noShootingWhileReloading.shootinggg = false;
+                }
+                WyswietlanieAmmoUI();
+            }
+        }
+        else if(bron == 3)
+        {
+            canStab = true;
+            if (Input.GetMouseButton(0) && canStab == true)
+            {  
+                StartCoroutine(Stab());
+                Stabb();
+            }
         }
     }
 
     public void WyswietlanieAmmoUI()
     {
         ammo.text = currentAmmo + " / " + allAmmo;
+    }
+
+    IEnumerator Stab()
+    {
+        canStab = false;
+
+        nozAnimator.SetTrigger("stabbing");
+        yield return new WaitForSeconds(.2f);
+        nozAnimator.ResetTrigger("stabbing");
+        
+        canStab = true;
+    }
+
+    void Stabb()
+    {
+        canstabdamage = true;
+        RaycastHit hit;
+        if (Physics.Raycast(kamera.transform.position, kamera.transform.forward, out hit, 4))
+        {   
+            Health przeciwnik = hit.transform.GetComponent<Health>(); 
+            if (canstabdamage==true)
+            {
+                przeciwnik.currentHealth -= 10;
+                przeciwnik.ModifyHealth(0);
+                canstabdamage = false;
+            }
+        }
     }
     IEnumerator Shoot()
     {
