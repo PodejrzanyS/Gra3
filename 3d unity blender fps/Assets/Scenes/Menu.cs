@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void PlayGame()
+    public string menuName;
+    public bool open;
+    public void Open()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        open = true;
+        gameObject.SetActive(true);
     }
-    public void QuitGame()
+
+    public void Close()
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        open = false;
+        gameObject.SetActive(false);
     }
 }
