@@ -336,6 +336,7 @@
 "Assets/Scripts/Multi/PlayerListItem.cs"
 "Assets/Scripts/Multi/PlayerNameManager.cs"
 "Assets/Scripts/Multi/RoomListItem.cs"
+"Assets/Scripts/Multi/RoomManager.cs"
 "Assets/Scripts/Multi/ScriptableObjectGens/Gun.cs"
 "Assets/Scripts/Multi/Sway.cs"
 "Assets/Scripts/Multi/Weapon.cs"
