@@ -88,7 +88,7 @@ public class Motion : MonoBehaviour
 
 
         Vector3 t_direction = new Vector3(t_hmove, 0, t_vmove);
-        t_direction.Normalize();
+        
 
         float t_adjustedSpeed = speed;
         if (isSprinting) t_adjustedSpeed *= sprintModifier;
