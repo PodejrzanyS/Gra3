@@ -10,7 +10,7 @@ namespace Com.IZI.Slide
 
         public Transform player;
         public Transform cams;
-
+        public Transform weapon;
         public float xSensitivity;
         public float ySensitivity;
         public float maxAngle;
@@ -40,7 +40,9 @@ namespace Com.IZI.Slide
             {
 
                 cams.localRotation = t_delta;
+               
             }
+            weapon.rotation = cams.rotation;
         }
 
         void SetX()
@@ -53,7 +55,7 @@ namespace Com.IZI.Slide
 
         void UpdateCursorLock()
         {
-            if (cursorLocked)
+            if (!cursorLocked)
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;

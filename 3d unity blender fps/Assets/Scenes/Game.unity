@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 10943500}
   - component: {fileID: 10943502}
   - component: {fileID: 10943501}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Normal Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,11 +172,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10943499}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.44200003, z: 0.070999146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1355816232}
+  m_Father: {fileID: 402654151}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &10943501
@@ -240,6 +240,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -326,6 +330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -411,6 +419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -495,6 +507,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_Name
       value: board
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
@@ -585,6 +601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -648,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -734,6 +754,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -828,6 +852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -889,6 +917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -949,6 +981,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -1033,7 +1069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 78517066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,6 +1129,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -1185,7 +1225,7 @@ GameObject:
   - component: {fileID: 96291469}
   - component: {fileID: 96291468}
   - component: {fileID: 96291467}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cube (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1280,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1366,7 +1410,7 @@ GameObject:
   - component: {fileID: 118910372}
   - component: {fileID: 118910371}
   - component: {fileID: 118910370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,6 +1505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1546,6 +1594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1630,6 +1682,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -1738,7 +1794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 130905382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,6 +1830,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -1836,6 +1896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1896,6 +1960,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -1982,6 +2050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2067,6 +2139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2151,6 +2227,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -2245,6 +2325,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: a door (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -2329,6 +2417,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -2415,6 +2507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2500,6 +2596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2568,6 +2668,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_Name
       value: board (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
@@ -2658,6 +2762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2718,6 +2826,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -2802,7 +2914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212496887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2838,6 +2950,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -2932,6 +3048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3017,6 +3137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3086,6 +3210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3143,9 +3271,457 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 316122547}
     m_Modifications:
+    - target: {fileID: 100000, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100054, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100056, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100064, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100068, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100070, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100072, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100074, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100076, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100080, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100082, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100084, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100086, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100088, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100098, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100102, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100104, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100106, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100110, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100114, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100116, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100118, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100124, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100126, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100128, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100130, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100132, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100134, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100136, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100138, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100140, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100142, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100144, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100146, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100148, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100150, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100152, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100154, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100156, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100158, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100160, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100162, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100164, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100166, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100168, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100170, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100172, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100174, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100176, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100178, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100180, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100182, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100184, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100186, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100188, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100190, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100192, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100194, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100196, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100198, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100200, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100202, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100204, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100206, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100208, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100210, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100212, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100214, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100216, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100218, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 100220, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
       propertyPath: m_Name
       value: rack1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100220, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100222, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400220, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
       propertyPath: m_RootOrder
@@ -3228,6 +3804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3290,7 +3870,7 @@ GameObject:
   - component: {fileID: 252837254}
   - component: {fileID: 252837253}
   - component: {fileID: 252837252}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3385,6 +3965,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: a door1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3446,6 +4038,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -3554,7 +4150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263965746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3590,6 +4186,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -3660,6 +4260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3728,6 +4332,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -3848,6 +4456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3933,6 +4545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3983,6 +4599,37 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 30b92673b9b7ef44c9c11a474d9910c9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+--- !u!1 &282177069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282177070}
+  m_Layer: 9
+  m_Name: Misc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &282177070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282177069}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1427834975}
+  m_Father: {fileID: 1355816232}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283440871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,7 +4642,7 @@ GameObject:
   - component: {fileID: 283440875}
   - component: {fileID: 283440874}
   - component: {fileID: 283440873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4088,7 +4735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 287215529}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4124,6 +4771,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -4185,6 +4836,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -4282,7 +4937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 316122547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mapa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4378,7 +5033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321843907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4414,6 +5069,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -4506,7 +5165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348551627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4544,7 +5203,7 @@ GameObject:
   - component: {fileID: 353503189}
   - component: {fileID: 353503188}
   - component: {fileID: 353503187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4639,6 +5298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4724,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4808,6 +5475,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -4901,6 +5572,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -5060,7 +5735,7 @@ GameObject:
   - component: {fileID: 384618927}
   - component: {fileID: 384618926}
   - component: {fileID: 384618925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5154,6 +5829,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -5254,7 +5933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392669937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5290,6 +5969,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_Name
       value: board (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
@@ -5350,6 +6033,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
   m_PrefabInstance: {fileID: 397001680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &402654150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402654151}
+  m_Layer: 9
+  m_Name: Cameras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402654151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402654150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 10943500}
+  m_Father: {fileID: 1355816232}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &403545767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
@@ -5408,6 +6122,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -5500,7 +6218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419750674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5539,7 +6257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -5626,6 +6344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5710,6 +6432,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -5796,6 +6522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5856,6 +6586,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -5941,6 +6675,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -6051,6 +6789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6101,6 +6843,36 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 30b92673b9b7ef44c9c11a474d9910c9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+--- !u!1 &469140690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469140691}
+  m_Layer: 9
+  m_Name: Design
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469140691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469140690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1355816232}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &472841971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6111,6 +6883,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_Name
       value: board (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
@@ -6201,6 +6977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6286,6 +7066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6370,6 +7154,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -6457,7 +7245,7 @@ GameObject:
   - component: {fileID: 506929678}
   - component: {fileID: 506929677}
   - component: {fileID: 506929676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6576,6 +7364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6660,6 +7452,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -6753,6 +7549,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -6899,6 +7699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6982,7 +7786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534443427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7068,9 +7872,457 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 316122547}
     m_Modifications:
+    - target: {fileID: 100000, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100052, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100054, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100056, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100060, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100062, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100064, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100068, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100070, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100072, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100074, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100076, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100080, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100082, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100084, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100086, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100088, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100090, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100092, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100094, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100096, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100098, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100100, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100102, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100104, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100106, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100108, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100110, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100114, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100116, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100118, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100120, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100122, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100124, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100126, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100128, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100130, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100132, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100134, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100136, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100138, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100140, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100142, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100144, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100146, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100148, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100150, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100152, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100154, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100156, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100158, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100160, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100162, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100164, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100166, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100168, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100170, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100172, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100174, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100176, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100178, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100180, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100182, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100184, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100186, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100188, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100190, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100192, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100194, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100196, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100198, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100200, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100202, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100204, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100206, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100208, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100210, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100212, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100214, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100216, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100218, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 100220, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
       propertyPath: m_Name
       value: rack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100220, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100222, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400220, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
       propertyPath: m_RootOrder
@@ -7225,6 +8477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7312,7 +8568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -7408,7 +8664,7 @@ GameObject:
   - component: {fileID: 571817973}
   - component: {fileID: 571817972}
   - component: {fileID: 571817971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7504,7 +8760,7 @@ GameObject:
   - component: {fileID: 578050211}
   - component: {fileID: 578050210}
   - component: {fileID: 578050209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7599,6 +8855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7660,6 +8920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7719,7 +8983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 586826663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7754,7 +9018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589690872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7789,7 +9053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 591503928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7825,6 +9089,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -7911,6 +9179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -7996,6 +9268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8065,6 +9341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8125,6 +9405,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -8197,7 +9481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -8285,7 +9569,7 @@ GameObject:
   - component: {fileID: 622648262}
   - component: {fileID: 622648261}
   - component: {fileID: 622648260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8379,6 +9663,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -8490,7 +9778,7 @@ GameObject:
   - component: {fileID: 637862985}
   - component: {fileID: 637862984}
   - component: {fileID: 637862983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8633,6 +9921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8693,6 +9985,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -8786,6 +10082,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -8920,6 +10220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9003,7 +10307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 687693034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9063,6 +10367,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -9157,6 +10465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9244,7 +10556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -9339,6 +10651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9409,7 +10725,7 @@ GameObject:
   - component: {fileID: 719395252}
   - component: {fileID: 719395251}
   - component: {fileID: 719395250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9504,6 +10820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9589,6 +10909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9650,6 +10974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9709,7 +11037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734198684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9745,6 +11073,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -9853,7 +11185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756102474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9889,6 +11221,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -9981,7 +11317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 793955683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10019,7 +11355,7 @@ GameObject:
   - component: {fileID: 804931227}
   - component: {fileID: 804931226}
   - component: {fileID: 804931225}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cube (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10162,6 +11498,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: a door
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10224,6 +11568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10284,6 +11632,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -10378,6 +11730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10462,6 +11818,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -10644,6 +12004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -10727,7 +12091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 866876978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10764,6 +12128,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -10850,6 +12218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10912,7 +12284,7 @@ GameObject:
   - component: {fileID: 876693133}
   - component: {fileID: 876693132}
   - component: {fileID: 876693131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11009,7 +12381,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_RootOrder
@@ -11145,7 +12521,7 @@ GameObject:
   - component: {fileID: 892092827}
   - component: {fileID: 892092826}
   - component: {fileID: 892092825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11241,6 +12617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11325,6 +12705,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -11412,7 +12796,7 @@ GameObject:
   - component: {fileID: 904991005}
   - component: {fileID: 904991004}
   - component: {fileID: 904991003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11507,6 +12891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11594,7 +12982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -11705,6 +13093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11790,6 +13182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11850,6 +13246,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -11934,7 +13334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 944600181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Map Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11957,7 +13357,7 @@ Transform:
   - {fileID: 828625806}
   - {fileID: 259754804}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952386628
 GameObject:
@@ -12063,6 +13463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12156,6 +13560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12216,6 +13624,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -12310,6 +13722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: board2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 566a42721c548c54cb9bc534f063aab3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 566a42721c548c54cb9bc534f063aab3, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -12378,6 +13794,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -12472,6 +13892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12531,7 +13955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 982374819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12591,6 +14015,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -12677,6 +14105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12761,6 +14193,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -12871,6 +14307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12957,7 +14397,7 @@ GameObject:
   - component: {fileID: 1018997090}
   - component: {fileID: 1018997089}
   - component: {fileID: 1018997088}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Plane (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -13102,7 +14542,7 @@ GameObject:
   - component: {fileID: 1030960380}
   - component: {fileID: 1030960379}
   - component: {fileID: 1030960378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13197,6 +14637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -13257,6 +14701,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -13345,7 +14793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -13430,7 +14878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1046848838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13465,7 +14913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1047344408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13528,7 +14976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_RootOrder
@@ -13627,6 +15075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -13711,6 +15163,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -13798,7 +15254,7 @@ GameObject:
   - component: {fileID: 1074014535}
   - component: {fileID: 1074014534}
   - component: {fileID: 1074014533}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13917,6 +15373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: board (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -13986,6 +15446,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -14071,6 +15535,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -14223,6 +15691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14315,6 +15787,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -14433,6 +15909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14493,6 +15973,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -14611,6 +16095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -14685,6 +16173,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+--- !u!1 &1132399343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132399344}
+  m_Layer: 9
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1132399344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132399343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.442, z: 0.071}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1355816232}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1133319680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14695,6 +16213,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -14781,6 +16303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -14845,6 +16371,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -14932,7 +16462,7 @@ GameObject:
   - component: {fileID: 1140619724}
   - component: {fileID: 1140619723}
   - component: {fileID: 1140619722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15027,6 +16557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15112,6 +16646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -15173,6 +16711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15232,7 +16774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157467071}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15271,6 +16813,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_Name
       value: board (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
@@ -15361,6 +16907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15449,6 +16999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -15533,6 +17087,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -15625,7 +17183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185567204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15661,6 +17219,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -15749,7 +17311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -15842,7 +17404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1191978873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15878,6 +17440,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -15939,6 +17505,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -16053,6 +17623,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: a door
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -16138,6 +17716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16199,6 +17781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -16259,6 +17845,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -16369,6 +17959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16430,6 +18024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16490,6 +18088,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -16574,7 +18176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245286654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16610,6 +18212,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -16728,6 +18334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -16790,7 +18400,7 @@ GameObject:
   - component: {fileID: 1262954917}
   - component: {fileID: 1262954916}
   - component: {fileID: 1262954915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16909,6 +18519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16993,6 +18607,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -17079,6 +18697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -17146,7 +18768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309999150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17182,6 +18804,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -17298,6 +18924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -17407,6 +19037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17467,6 +19101,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_Name
       value: a door (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
       propertyPath: m_RootOrder
@@ -17555,7 +19197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_RootOrder
@@ -17654,6 +19296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17715,11 +19361,12 @@ GameObject:
   - component: {fileID: 1355816232}
   - component: {fileID: 1355816231}
   - component: {fileID: 1355816230}
+  - component: {fileID: 1355816227}
   - component: {fileID: 1355816228}
   - component: {fileID: 1355816233}
-  - component: {fileID: 1355816227}
   - component: {fileID: 1355816229}
-  m_Layer: 0
+  - component: {fileID: 1355816234}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17768,8 +19415,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b5e488c471d1944812f9f2316dad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
-  cmaera: {fileID: 1472459185}
+  speed: 5
+  sprintModifier: 2
+  jumpForce: 10
+  weaponParent: {fileID: 1132399344}
+  groundDetector: {fileID: 1427834975}
+  normalCam: {fileID: 1472459185}
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
   rig: {fileID: 1355816227}
 --- !u!23 &1355816230
 MeshRenderer:
@@ -17791,7 +19445,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e32bf432e070d340bd61c2df5771cb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17829,12 +19483,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355816226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.6, y: 0.31, z: -24.23}
+  m_LocalPosition: {x: -54.11, y: -1.609, z: -10.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 10943500}
+  - {fileID: 402654151}
+  - {fileID: 469140691}
+  - {fileID: 282177070}
+  - {fileID: 1132399344}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1355816233
 MonoBehaviour:
@@ -17850,9 +19507,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1355816232}
   cams: {fileID: 10943500}
+  weapon: {fileID: 1132399344}
   xSensitivity: 5
   ySensitivity: 5
   maxAngle: 90
+--- !u!114 &1355816234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355816226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2743b191c93764043855c2a19a7dcd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadout:
+  - {fileID: 11400000, guid: 1a60a6c90859d31458f902609d51516e, type: 2}
+  weaponParent: {fileID: 1132399344}
+  bullethholePrefab: {fileID: 354652052442341107, guid: 305ba67efd61fe241975003f7851b41e, type: 3}
+  canBeShot:
+    serializedVersion: 2
+    m_Bits: 119
 --- !u!1001 &1358719341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17863,6 +19540,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -17971,7 +19652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1365056950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18006,7 +19687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367951216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18074,7 +19755,7 @@ GameObject:
   - component: {fileID: 1378036084}
   - component: {fileID: 1378036083}
   - component: {fileID: 1378036082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18167,7 +19848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383393714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18228,6 +19909,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -18316,7 +20001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -18403,6 +20088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -18472,6 +20161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -18532,6 +20225,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -18626,6 +20323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -18712,7 +20413,7 @@ GameObject:
   - component: {fileID: 1407423915}
   - component: {fileID: 1407423914}
   - component: {fileID: 1407423913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18853,7 +20554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1417720570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18891,7 +20592,7 @@ GameObject:
   - component: {fileID: 1419044271}
   - component: {fileID: 1419044270}
   - component: {fileID: 1419044269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18987,6 +20688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -19072,6 +20777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -19130,6 +20839,36 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 30b92673b9b7ef44c9c11a474d9910c9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+--- !u!1 &1427834974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427834975}
+  m_Layer: 9
+  m_Name: Ground Detect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1427834975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427834974}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.0699999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 282177070}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1430946932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19140,6 +20879,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -19225,6 +20968,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -19312,7 +21059,7 @@ GameObject:
   - component: {fileID: 1436580255}
   - component: {fileID: 1436580254}
   - component: {fileID: 1436580253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19406,6 +21153,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -19517,7 +21268,7 @@ GameObject:
   - component: {fileID: 1449104566}
   - component: {fileID: 1449104565}
   - component: {fileID: 1449104564}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19612,6 +21363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -19697,6 +21452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -19781,6 +21540,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_Name
       value: wall4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2c12cc399276f34997617080b02d780, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_RootOrder
@@ -19871,7 +21634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &1472459185
 Camera:
   m_ObjectHideFlags: 0
@@ -19938,7 +21701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472542402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19974,6 +21737,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -20068,6 +21835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -20151,7 +21922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1490953811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20189,7 +21960,7 @@ GameObject:
   - component: {fileID: 1496503027}
   - component: {fileID: 1496503026}
   - component: {fileID: 1496503025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20283,7 +22054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1508202303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SALE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20389,6 +22160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -20458,6 +22233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -20518,6 +22297,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -20580,6 +22363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -20640,6 +22427,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -20726,6 +22517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -20810,6 +22605,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -20902,7 +22701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1555310934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20938,6 +22737,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -21022,7 +22825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1561180566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21058,6 +22861,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -21145,7 +22952,7 @@ GameObject:
   - component: {fileID: 1565759342}
   - component: {fileID: 1565759341}
   - component: {fileID: 1565759340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21266,7 +23073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_RootOrder
@@ -21361,6 +23168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -21445,6 +23256,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -21539,6 +23354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21624,6 +23443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21684,6 +23507,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -21754,6 +23581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -21814,6 +23645,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -21899,6 +23734,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_Name
       value: wall4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e2c12cc399276f34997617080b02d780, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_RootOrder
@@ -22008,6 +23847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -22103,7 +23946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_RootOrder
@@ -22200,7 +24043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633342161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22333,6 +24176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -22450,6 +24297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -22559,6 +24410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -22619,6 +24474,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -22713,6 +24572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -22797,6 +24660,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -22944,6 +24811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -23005,6 +24876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -23064,7 +24939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1719033755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23099,7 +24974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1722941597}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23154,6 +25029,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -23240,6 +25119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -23300,6 +25183,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -23369,6 +25256,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -23479,6 +25370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -23547,6 +25442,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -23633,6 +25532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -23717,6 +25620,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -23803,6 +25710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -23862,7 +25773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767572477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23922,6 +25833,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -23983,6 +25898,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -24069,6 +25988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -24129,6 +26052,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -24193,7 +26120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -24288,6 +26215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -24348,6 +26279,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -24432,7 +26367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1794727307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24468,6 +26403,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -24552,7 +26491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808824372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24588,6 +26527,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -24674,6 +26617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -24759,6 +26706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -24819,6 +26770,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -24948,6 +26903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -25032,6 +26991,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -25120,7 +27083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -25195,6 +27158,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -25279,7 +27246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1842528543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25315,6 +27282,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -25376,6 +27347,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -25440,7 +27415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -25529,7 +27504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -25623,6 +27598,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -25733,6 +27712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -25820,7 +27803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 428d9da19f0db6d42a12afe656585894, type: 3}
       propertyPath: m_RootOrder
@@ -25921,7 +27904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -26035,6 +28018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -26098,7 +28085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e3fd7e9d6b3f64648beef3391d3952d6, type: 3}
       propertyPath: m_RootOrder
@@ -26192,6 +28179,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -26302,6 +28293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -26390,6 +28385,18 @@ PrefabInstance:
     - target: {fileID: 100000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
       propertyPath: m_Name
       value: a door1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
       propertyPath: m_RootOrder
@@ -26495,6 +28502,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -26605,6 +28616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -26710,6 +28725,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: a door1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e7aacb82296e75c41acea0abba4c8978, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -26789,7 +28816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994562188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26827,7 +28854,7 @@ GameObject:
   - component: {fileID: 2003360009}
   - component: {fileID: 2003360008}
   - component: {fileID: 2003360007}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Cube (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26994,6 +29021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -27125,7 +29156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2022178126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27185,6 +29216,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -27270,6 +29305,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -27380,6 +29419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -27440,6 +29483,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -27525,6 +29572,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -27621,7 +29672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -27707,6 +29758,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_Name
       value: table3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0699d22803476344d956abf42dc88970, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0699d22803476344d956abf42dc88970, type: 3}
       propertyPath: m_RootOrder
@@ -27801,6 +29856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -27886,6 +29945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -27947,6 +30010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -28007,6 +30074,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_Name
       value: chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
@@ -28093,6 +30164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -28178,6 +30253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -28238,6 +30317,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -28302,7 +30385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2c12cc399276f34997617080b02d780, type: 3}
       propertyPath: m_RootOrder
@@ -28393,6 +30476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -28477,6 +30564,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_Name
       value: computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19da5e77d15e6b246ae6557f5f4c3cbe, type: 3}
       propertyPath: m_RootOrder
@@ -28563,6 +30654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -28646,7 +30741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2134857187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stanowisko (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28684,7 +30779,7 @@ GameObject:
   - component: {fileID: 2138580310}
   - component: {fileID: 2138580309}
   - component: {fileID: 2138580308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28778,6 +30873,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_Name
       value: board (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5613243e699c34046bcf679855532f68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5613243e699c34046bcf679855532f68, type: 3}
       propertyPath: m_RootOrder
