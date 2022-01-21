@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Motion : MonoBehaviour
+using Photon.Pun;
+public class Motion : MonoBehaviourPunCallbacks
 {
     #region Variables
     public float speed;
@@ -11,6 +11,7 @@ public class Motion : MonoBehaviour
     public Transform weaponParent;
     public Transform groundDetector;
     public Camera normalCam;
+    public GameObject cameraParent;
     public LayerMask ground;
 
     public Rigidbody rig;
@@ -25,13 +26,17 @@ public class Motion : MonoBehaviour
     #region Monobehaviour Callback
     private void Start()
     {
+        
+        cameraParent.SetActive(photonView.IsMine);
+
         baseFOV = normalCam.fieldOfView;
-        normalCam.enabled = false;
+        if (Camera.main) normalCam.enabled = false;
         rig = GetComponent<Rigidbody>();
         WeaponParentOrigin = weaponParent.localPosition;
     }
     private void Update()
     {
+        if (!photonView.IsMine) return;
         float t_hmove = Input.GetAxis("Horizontal");
         float t_vmove = Input.GetAxis("Vertical");
 

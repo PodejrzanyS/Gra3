@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 namespace Com.IZI.Slide
 {
-    public class Look : MonoBehaviour
+    public class Look : MonoBehaviourPunCallbacks
     {
         public static bool cursorLocked;
 
@@ -24,6 +24,7 @@ namespace Com.IZI.Slide
 
         void Update()
         {
+            if (!photonView.IsMine) return;
             SetY();
             SetX();
 

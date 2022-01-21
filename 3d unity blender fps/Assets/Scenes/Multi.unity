@@ -4344,7 +4344,7 @@ MonoBehaviour:
   roomNameInputField: {fileID: 1260142096}
   errorText: {fileID: 469581487}
   roomNameText: {fileID: 1862208173}
-  roomListContent: {fileID: 1862208172}
+  roomListContent: {fileID: 1013467105}
   roomListItemPrefab: {fileID: 2695571794736288607, guid: 4aa36b4f538766b499bfccc8c8d0a298, type: 3}
   playerListContent: {fileID: 484724458}
   PlayerListItemPrefab: {fileID: 6148867901884449695, guid: aaf154284c4ff8444b5579fead4657f3, type: 3}

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Sway : MonoBehaviour
+using Photon.Pun;
+public class Sway : MonoBehaviourPunCallbacks
 {
     public float intensity;
     public float smooth;
