@@ -8,6 +8,7 @@ using System.Linq;
 using UnityEngine.UI;
 namespace Com.Kawaiisun.SimpleHostile
 {
+    [System.Serializable]
     public class ProfileData
     {
         public string username;
@@ -60,7 +61,8 @@ namespace Com.Kawaiisun.SimpleHostile
 
         public void Awake()
         {
-
+            myProfile = Data.LoadProfile();
+            usernameField.text = myProfile.username;
             Instance = this;
         }
 
@@ -135,6 +137,7 @@ namespace Com.Kawaiisun.SimpleHostile
             {
                 myProfile.username = usernameField.text;
             }
+            Data.SaveProfile(myProfile);
             PhotonNetwork.LoadLevel(3);
         }
         public void OnUsernameInputValueChanged()
@@ -159,6 +162,7 @@ namespace Com.Kawaiisun.SimpleHostile
             {
                 myProfile.username = usernameField.text;
             }
+            Data.SaveProfile(myProfile);
             PhotonNetwork.JoinRoom(info.Name);
             MenuManager.Instance.OpenMenu("loading");
         }

@@ -326,6 +326,7 @@
 "Assets/Photon/PhotonLibs/WebSocket/SocketWebTcp.cs"
 "Assets/Photon/PhotonLibs/WebSocket/WebSocket.cs"
 "Assets/Photon/PhotonRealtime/Demos/DemoLoadBalancing/ConnectAndJoinRandomLb.cs"
+"Assets/Scripts/Multi/Data.cs"
 "Assets/Scripts/Multi/Launcher.cs"
 "Assets/Scripts/Multi/Look.cs"
 "Assets/Scripts/Multi/Main_Menu.cs"

@@ -40,13 +40,13 @@ namespace Com.Kawaiisun.SimpleHostile
                 {
                     Aim(Input.GetMouseButton(1));
 
-                    if (Input.GetMouseButton(0) && currentCooldown <= 0)
+                    if (Input.GetMouseButton(0) && currentCooldown <= 0 && !isReloading)
                     {
                         if (loadout[currentIndex].FireBullet()) photonView.RPC("Shoot", RpcTarget.All);
                         else StartCoroutine(Reload(loadout[currentIndex].reload));
 
                     }
-                    if (Input.GetKeyDown(KeyCode.R)) StartCoroutine(Reload(loadout[currentIndex].reload));
+                    if (Input.GetKeyDown(KeyCode.R) && !isReloading) StartCoroutine(Reload(loadout[currentIndex].reload));
 
                     //cd
                     if (currentCooldown > 0) currentCooldown -= Time.deltaTime;
@@ -139,7 +139,7 @@ namespace Com.Kawaiisun.SimpleHostile
                     //shooting other player on network
                     if (t_hit.collider.gameObject.layer == 11)
                     {
-                        t_hit.collider.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage);
+                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage,PhotonNetwork.LocalPlayer.ActorNumber);
                     
                     }
                 }
@@ -153,9 +153,9 @@ namespace Com.Kawaiisun.SimpleHostile
           
         }
         [PunRPC]
-        private void TakeDamage(int p_damage)
+        private void TakeDamage(int p_damage,int p_actor)
         {
-            GetComponent<Player>().TakeDamage(p_damage);
+            GetComponent<Player>().TakeDamage(p_damage,p_actor);
         }
 
         #endregion

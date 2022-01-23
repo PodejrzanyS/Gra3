@@ -98,7 +98,7 @@ namespace Com.Kawaiisun.SimpleHostile
             bool isJumping = jump && isGrounded;
             bool isSprinting = sprint && t_vmove > 0 && !isJumping && isGrounded;
 
-            if (Input.GetKeyDown(KeyCode.U)) TakeDamage(10);
+            if (Input.GetKeyDown(KeyCode.U)) TakeDamage(100,-1);
             
             if (isJumping && rig.velocity.y <= 0)
             {
@@ -224,7 +224,7 @@ namespace Com.Kawaiisun.SimpleHostile
         #region public methods
 
 
-        public void TakeDamage(int p_damage)
+        public void TakeDamage(int p_damage,int p_actor)
         {
             if (photonView.IsMine)
             {
@@ -233,6 +233,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 if (current_health <= 0)
                 {
                     manager.Spawn();
+                    manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
+
+                    if (p_actor >= 0)
+                        manager.ChangeStat_S(p_actor, 0, 1);
                     PhotonNetwork.Destroy(gameObject);
                 }
             }
