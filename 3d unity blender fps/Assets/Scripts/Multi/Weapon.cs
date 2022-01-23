@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using Photon.Pun;
+using UnityEngine.UI;
+
 namespace Com.Kawaiisun.SimpleHostile
 {
     public class Weapon : MonoBehaviourPunCallbacks
@@ -15,21 +17,23 @@ namespace Com.Kawaiisun.SimpleHostile
         public GameObject bullethholePrefab;
         public LayerMask canBeShot;
         private float currentCooldown;
+        private bool isReloading;
+        
         #endregion
         #region MonoHehaviour Callbacks
 
 
-        void Start()
+        private void Start()
         {
-
-
+            foreach (Gun a in loadout) a.Initialize();
+            Equip(0);
         }
 
         // Update is called once per frame
         void Update()
         {
-            
-            if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha1)) { photonView.RPC("Equip",RpcTarget.All,0); }
+
+            if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha1)) { photonView.RPC("Equip", RpcTarget.All, 0); }
             if (currentWeapon != null)
             {
                 if (photonView.IsMine)
@@ -38,9 +42,11 @@ namespace Com.Kawaiisun.SimpleHostile
 
                     if (Input.GetMouseButton(0) && currentCooldown <= 0)
                     {
-                        photonView.RPC("Shoot", RpcTarget.All);
+                        if (loadout[currentIndex].FireBullet()) photonView.RPC("Shoot", RpcTarget.All);
+                        else StartCoroutine(Reload(loadout[currentIndex].reload));
 
                     }
+                    if (Input.GetKeyDown(KeyCode.R)) StartCoroutine(Reload(loadout[currentIndex].reload));
 
                     //cd
                     if (currentCooldown > 0) currentCooldown -= Time.deltaTime;
@@ -49,12 +55,40 @@ namespace Com.Kawaiisun.SimpleHostile
                 currentWeapon.transform.localPosition = Vector3.Lerp(currentWeapon.transform.localPosition, Vector3.zero, Time.deltaTime * 4f);
             }
         }
+
+        #region Public Metods
+        public void RefreshAmmo(Text p_text)
+        {
+            int t_clip = loadout[currentIndex].GetClip();
+            int t_stache = loadout[currentIndex].GetStash();
+
+            p_text.text = t_clip.ToString("D2") + " / " + t_stache.ToString("D2");
+
+        }
+
+        #endregion
         #endregion
         #region Private Metods
+
+        IEnumerator Reload(float p_wait)
+        {
+            isReloading = true;
+            currentWeapon.SetActive(false);
+
+            yield return new WaitForSeconds(p_wait);
+
+            loadout[currentIndex].Reload();
+            currentWeapon.SetActive(true);
+            isReloading = false; 
+        }
         [PunRPC]
         void Equip(int p_ind)
         {
-            if (currentWeapon != null) Destroy(currentWeapon);
+            if (currentWeapon != null)
+            {
+               if(isReloading) StartCoroutine("Reload");
+                Destroy(currentWeapon);
+            }
 
             currentIndex = p_ind;
             GameObject t_newWeapon = Instantiate(loadout[p_ind].prefab, weaponParent.position, weaponParent.rotation, weaponParent) as GameObject;

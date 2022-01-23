@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 namespace Com.Kawaiisun.SimpleHostile
 {
@@ -19,7 +20,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public LayerMask ground;
 
         private Transform ui_healthbar;
-
+        private Text ui_ammo;
         public Rigidbody rig;
         private float baseFOV;
         private float sprintFOVModifier = 1.2f;
@@ -29,6 +30,7 @@ namespace Com.Kawaiisun.SimpleHostile
         private float idleCounter;
         private int current_health;
         private Manager manager;
+        private Weapon weapon;
         #endregion
 
         #region Monobehaviour Callback
@@ -36,6 +38,7 @@ namespace Com.Kawaiisun.SimpleHostile
         {
 
             manager = GameObject.Find("Manager").GetComponent<Manager>();
+            weapon = GetComponent<Weapon>();
             current_health = max_health;
 
 
@@ -55,6 +58,7 @@ namespace Com.Kawaiisun.SimpleHostile
             if (photonView.IsMine)
             {
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
+                ui_ammo = GameObject.Find("HUD/Ammo/Text").GetComponent<Text>();
                 RefreshHealthBar();
             }
         }
@@ -99,7 +103,7 @@ namespace Com.Kawaiisun.SimpleHostile
             //UI refreshes
 
             RefreshHealthBar();
-
+            weapon.RefreshAmmo(ui_ammo);
 
         }
         void FixedUpdate()
