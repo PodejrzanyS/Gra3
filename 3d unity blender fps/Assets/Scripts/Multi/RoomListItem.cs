@@ -1,3 +1,4 @@
+using Com.Kawaiisun.SimpleHostile;
 using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;

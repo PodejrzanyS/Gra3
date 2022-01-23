@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Com.Kawaiisun.SimpleHostile
 {
@@ -19,7 +20,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public Camera normalCam;
         public GameObject cameraParent;
         public LayerMask ground;
-
+        private TMP_Text ui_username;
         private Transform ui_healthbar;
         private Text ui_ammo;
         public Rigidbody rig;
@@ -68,7 +69,10 @@ namespace Com.Kawaiisun.SimpleHostile
             {
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
                 ui_ammo = GameObject.Find("HUD/Ammo/Text").GetComponent<Text>();
+                ui_username = GameObject.Find("HUD/Username/Text").GetComponent<TMP_Text>();
                 RefreshHealthBar();
+
+                ui_username.text = Launcher.myProfile.username;
             }
         }
         private void Update()
