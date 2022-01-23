@@ -13,8 +13,29 @@ namespace Com.Kawaiisun.SimpleHostile
         public string username;
         public int level;
         public int xp;
+
+        public ProfileData()
+        {
+            this.username = "DEFAULT USERNAME";
+            this.level = 0;
+            this.xp = 0;
+        }
+
+        public ProfileData(string u, int l, int x)
+        {
+            this.username = u;
+            this.level = l;
+            this.xp = x;
+        }
+        object[] ConvertToObjectArr()
+        {
+            object[] ret = new object[3];
+
+            return ret;
+        }
     }
 
+   
     public class Launcher : MonoBehaviourPunCallbacks
     {
         public TMP_InputField usernameField;

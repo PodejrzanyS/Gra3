@@ -40,6 +40,8 @@ namespace Com.Kawaiisun.SimpleHostile
         private Vector3 slide_dir;
         private Vector3 origin;
         private Vector3 velocity;
+        [HideInInspector]public ProfileData playerProfile;
+        public TextMeshPro playerUsername;
         #endregion
 
         #region Monobehaviour Callback
@@ -73,7 +75,15 @@ namespace Com.Kawaiisun.SimpleHostile
                 RefreshHealthBar();
 
                 ui_username.text = Launcher.myProfile.username;
+
+                photonView.RPC("SyncProfile", RpcTarget.All, Launcher.myProfile.username,Launcher.myProfile.level,Launcher.myProfile.xp);
             }
+        }
+        [PunRPC]
+        private void SyncProfile(string p_username,int p_level,int p_xp)
+        {
+            playerProfile = new ProfileData(p_username,p_level,p_xp);
+            playerUsername.text = playerProfile.username;
         }
         private void Update()
         {
