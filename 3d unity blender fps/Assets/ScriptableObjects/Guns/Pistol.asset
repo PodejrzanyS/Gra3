@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Pistol
   damage: 30
   firerate: 0.15
-  ammo: 36
+  ammo: 999
   clipsize: 12
   bloom: 20
   recoil: 5
