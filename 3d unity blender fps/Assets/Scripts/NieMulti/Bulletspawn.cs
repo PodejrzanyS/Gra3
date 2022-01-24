@@ -27,10 +27,13 @@ public class Bulletspawn : MonoBehaviour
     public bool canStab;
     bool canstabdamage;
     public Animator nozAnimator;
+    public float zycie;
+    public Image CzerwoneZycie;
 
 
     void Start()
     {
+        zycie = 100;
         animator = GetComponent<Animator>();
 
         //przykladowe wartosci do testu broni
@@ -48,6 +51,7 @@ public class Bulletspawn : MonoBehaviour
     }
     void Update()
     {
+        CzerwoneZycie.fillAmount = zycie / 100f;
         if (shakeDuration > 0)
         {
             camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
@@ -60,14 +64,8 @@ public class Bulletspawn : MonoBehaviour
             camTransform.localPosition = originalPos;
         }
 
-
-
-
-
-
-
-
-
+        
+        
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -140,6 +138,14 @@ public class Bulletspawn : MonoBehaviour
         ammo.text = currentAmmo + " / " + allAmmo;
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            zycie -= 10;
+            
+        }
+    }
     IEnumerator Stab()
     {
         canStab = false;
