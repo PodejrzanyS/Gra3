@@ -101,7 +101,7 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             if (currentWeapon != null)
             {
-               if(isReloading) StartCoroutine("Reload");
+               //if(isReloading) StartCoroutine("Reload");
                 Destroy(currentWeapon);
             }
 
