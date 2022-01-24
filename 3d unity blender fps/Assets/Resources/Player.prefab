@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b5e488c471d1944812f9f2316dad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 300
   sprintModifier: 2.5
   jumpForce: 250
   slideModifier: 2
@@ -521,12 +521,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadout:
+  - {fileID: 11400000, guid: 5481c70fd9c1d9b48ac3794b511fbcb0, type: 2}
   - {fileID: 11400000, guid: 1a60a6c90859d31458f902609d51516e, type: 2}
   weaponParent: {fileID: 3581931556254457903}
   bullethholePrefab: {fileID: 354652052442341107, guid: 305ba67efd61fe241975003f7851b41e, type: 3}
   canBeShot:
     serializedVersion: 2
     m_Bits: 2167
+  isAming: 0
 --- !u!114 &-8326967141047283727
 MonoBehaviour:
   m_ObjectHideFlags: 0

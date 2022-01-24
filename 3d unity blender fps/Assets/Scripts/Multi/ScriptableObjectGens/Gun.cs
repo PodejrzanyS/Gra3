@@ -11,6 +11,8 @@ namespace Com.Kawaiisun.SimpleHostile
         public int damage;
         public float firerate;
         public int ammo;
+
+        public int burst;
         public int clipsize;
         public float bloom;
         public float recoil;

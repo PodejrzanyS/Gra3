@@ -107,7 +107,12 @@ namespace Com.Kawaiisun.SimpleHostile
                 rig.AddForce(Vector3.up * jumpForce);
             }
             //head bob
-            if (sliding) { }
+            float t_aim_adjust = 1f;
+            if (sliding) 
+            {
+                HeadBob(movementCounter, 0.15f, 0.075f);
+                weaponParent.localPosition = Vector3.Lerp(weaponParent.localPosition, targetWeaponBobPosition, Time.deltaTime * 10f);
+            }
             else if (t_hmove == 0 && t_vmove == 0)
             {
                 HeadBob(idleCounter, 0.015f, 0.015f);
@@ -156,7 +161,7 @@ namespace Com.Kawaiisun.SimpleHostile
             if (!sliding) 
             {
                 t_direction = new Vector3(t_hmove, 0, t_vmove);
-                t_direction.Normalize();
+                //t_direction.Normalize();
                 t_direction = transform.TransformDirection(t_direction);
 
               
@@ -209,7 +214,9 @@ namespace Com.Kawaiisun.SimpleHostile
         #region Private Methods
         void HeadBob(float p_z, float p_x_intensity, float p_y_intensity)
         {
-            targetWeaponBobPosition = weaponParentCurrentPos + new Vector3(Mathf.Cos(p_z) * p_x_intensity, Mathf.Sin(p_z * 2) * p_y_intensity, 0);
+            float t_aim_adjust = 1f;
+            if (weapon.isAming) t_aim_adjust = 0.1f;
+            targetWeaponBobPosition = weaponParentCurrentPos + new Vector3(Mathf.Cos(p_z) * p_x_intensity*t_aim_adjust, Mathf.Sin(p_z * 2) * p_y_intensity*t_aim_adjust, 0);
         }
 
         void RefreshHealthBar()

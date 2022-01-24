@@ -16,6 +16,7 @@ namespace Com.Kawaiisun.SimpleHostile
         private GameObject currentWeapon;
         public GameObject bullethholePrefab;
         public LayerMask canBeShot;
+        public bool isAming = false;
         private float currentCooldown;
         private bool isReloading;
         
@@ -34,16 +35,30 @@ namespace Com.Kawaiisun.SimpleHostile
         {
 
             if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha1)) { photonView.RPC("Equip", RpcTarget.All, 0); }
+            if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha2)) { photonView.RPC("Equip", RpcTarget.All, 1); }
             if (currentWeapon != null)
             {
                 if (photonView.IsMine)
                 {
                     Aim(Input.GetMouseButton(1));
 
-                    if (Input.GetMouseButton(0) && currentCooldown <= 0 && !isReloading)
+                    if (loadout[currentIndex].burst != 1)
                     {
-                        if (loadout[currentIndex].FireBullet()) photonView.RPC("Shoot", RpcTarget.All);
-                        else StartCoroutine(Reload(loadout[currentIndex].reload));
+                        if (Input.GetMouseButtonDown(0) && currentCooldown <= 0 && !isReloading)
+                        {
+                            if (loadout[currentIndex].FireBullet()) photonView.RPC("Shoot", RpcTarget.All);
+                            else StartCoroutine(Reload(loadout[currentIndex].reload));
+
+                        }
+                    }
+                    else
+                    {
+                        if (Input.GetMouseButton(0) && currentCooldown <= 0 && !isReloading)
+                        {
+                            if (loadout[currentIndex].FireBullet()) photonView.RPC("Shoot", RpcTarget.All);
+                            else StartCoroutine(Reload(loadout[currentIndex].reload));
+
+                        }
 
                     }
                     if (Input.GetKeyDown(KeyCode.R) && !isReloading) StartCoroutine(Reload(loadout[currentIndex].reload));
@@ -100,6 +115,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         void Aim(bool p_isAiming)
         {
+            isAming = p_isAiming;
             Transform t_anchor = currentWeapon.transform.Find("Anchor");
             Transform t_state_ads = currentWeapon.transform.Find("States/ADS");
             Transform t_state_hip = currentWeapon.transform.Find("States/Hip");
