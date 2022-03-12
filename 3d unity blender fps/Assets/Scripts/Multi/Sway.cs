@@ -2,39 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class Sway : MonoBehaviourPunCallbacks
+
+namespace Com.Kawaiisun.SimpleHostile
 {
-    public float intensity;
-    public float smooth;
-    public bool isMine;
-
-    private Quaternion origin_rotation;
-    private void Start()
+    public class Sway : MonoBehaviourPunCallbacks
     {
-        origin_rotation = transform.localRotation;
-    }
+        public float intensity;
+        public float smooth;
+        public bool isMine;
 
-    // Update is called once per frame
-    private void Update()
-    {
-        UpdateSway();
-    }
-
-    private void UpdateSway()
-    {
-        float t_x_mouse = Input.GetAxis("Mouse X");
-        float t_y_mouse = Input.GetAxis("Mouse Y");
-
-        if(!isMine)
+        private Quaternion origin_rotation;
+        private void Start()
         {
-             t_x_mouse = 0;
-             t_y_mouse = 0;
+            origin_rotation = transform.localRotation;
         }
 
-        Quaternion t_x_adj = Quaternion.AngleAxis(-intensity * t_x_mouse, Vector3.up);
-        Quaternion t_y_adj = Quaternion.AngleAxis(intensity * t_y_mouse, Vector3.up);
-        Quaternion target_rotation = origin_rotation * t_x_adj * t_y_adj;
+        // Update is called once per frame
+        private void Update()
+        {
+            if (Pause.paused) return;
+            UpdateSway();
+        }
 
-        transform.localRotation = Quaternion.Lerp(transform.localRotation, target_rotation, Time.deltaTime * smooth);
+        private void UpdateSway()
+        {
+            float t_x_mouse = Input.GetAxis("Mouse X");
+            float t_y_mouse = Input.GetAxis("Mouse Y");
+
+            if (!isMine)
+            {
+                t_x_mouse = 0;
+                t_y_mouse = 0;
+            }
+
+            Quaternion t_x_adj = Quaternion.AngleAxis(-intensity * t_x_mouse, Vector3.up);
+            Quaternion t_y_adj = Quaternion.AngleAxis(intensity * t_y_mouse, Vector3.up);
+            Quaternion target_rotation = origin_rotation * t_x_adj * t_y_adj;
+
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, target_rotation, Time.deltaTime * smooth);
+        }
     }
 }

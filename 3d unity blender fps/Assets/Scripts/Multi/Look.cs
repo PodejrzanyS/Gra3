@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-namespace Com.IZI.Slide
+namespace Com.Kawaiisun.SimpleHostile
 {
     public class Look : MonoBehaviourPunCallbacks
     {
@@ -25,6 +25,7 @@ namespace Com.IZI.Slide
         void Update()
         {
             if (!photonView.IsMine) return;
+            if (Pause.paused) return;
             SetY();
             SetX();
 

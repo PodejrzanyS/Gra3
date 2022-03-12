@@ -16,7 +16,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 			Destroy(gameObject);
 			return;
 		}
-		DontDestroyOnLoad(gameObject);
+		//DestroyOnLoad(gameObject);
 		Instance = this;
 	}
 

@@ -3,29 +3,31 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Bullet
     - Bulletspawn
-    - Com.IZI.Slide.Look
     - Com.Kawaiisun.SimpleHostile.Gun
     - Com.Kawaiisun.SimpleHostile.Launcher
+    - Com.Kawaiisun.SimpleHostile.Look
+    - Com.Kawaiisun.SimpleHostile.Main_Menu
     - Com.Kawaiisun.SimpleHostile.Manager
+    - Com.Kawaiisun.SimpleHostile.Pause
     - Com.Kawaiisun.SimpleHostile.Player
     - Com.Kawaiisun.SimpleHostile.PlayerNameManager
+    - Com.Kawaiisun.SimpleHostile.Sway
     - Com.Kawaiisun.SimpleHostile.Weapon
     - Enemy
     - Health
     - HealthBar
     - HealthBarDrzewo
     - HealthDrzewo
-    - Main_Menu
     - Manager2
     - Menu
     - MenuManager
     - MouseLook
+    - PauseMenu
     - PlayerListItem
     - PlayerMovement
     - RoomListItem
     - RoomManager
     - ShopTrigger
-    - Sway
     - WaveSpawner
     - interactLookAtMe
     - noShootingWhileReloading
@@ -101,9 +103,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -118,24 +124,48 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1516}
     - Class: 114
+      Script: {instanceID: 1524}
+    - Class: 114
+      Script: {instanceID: 2294}
+    - Class: 114
       Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 5672}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 5826}
+      Script: {instanceID: 3016}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 7022}
+      Script: {instanceID: 3538}
     - Class: 114
-      Script: {instanceID: 26266}
+      Script: {instanceID: 3944}
+    - Class: 114
+      Script: {instanceID: 5092}
+    - Class: 114
+      Script: {instanceID: 5362}
+    - Class: 114
+      Script: {instanceID: 5676}
+    - Class: 114
+      Script: {instanceID: 5830}
+    - Class: 114
+      Script: {instanceID: 5932}
+    - Class: 114
+      Script: {instanceID: 6162}
+    - Class: 114
+      Script: {instanceID: 7026}
+    - Class: 114
+      Script: {instanceID: 7598}
+    - Class: 114
+      Script: {instanceID: 27188}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 134
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -217,51 +247,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 3536}
-    - Class: 114
-      Script: {instanceID: 3828}
+      Script: {instanceID: 3538}
     - Class: 114
       Script: {instanceID: 3830}
     - Class: 114
-      Script: {instanceID: 3990}
+      Script: {instanceID: 3832}
     - Class: 114
-      Script: {instanceID: 4122}
+      Script: {instanceID: 3994}
     - Class: 114
-      Script: {instanceID: 4378}
+      Script: {instanceID: 4126}
     - Class: 114
-      Script: {instanceID: 5006}
+      Script: {instanceID: 4382}
     - Class: 114
-      Script: {instanceID: 5030}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 5034}
     - Class: 114
-      Script: {instanceID: 5358}
+      Script: {instanceID: 5092}
     - Class: 114
-      Script: {instanceID: 5446}
+      Script: {instanceID: 5362}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 5450}
     - Class: 114
-      Script: {instanceID: 5672}
+      Script: {instanceID: 5490}
     - Class: 114
-      Script: {instanceID: 5826}
+      Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 5928}
+      Script: {instanceID: 5830}
     - Class: 114
-      Script: {instanceID: 6144}
+      Script: {instanceID: 5932}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 6148}
     - Class: 114
-      Script: {instanceID: 6166}
+      Script: {instanceID: 6162}
     - Class: 114
-      Script: {instanceID: 6748}
+      Script: {instanceID: 6170}
     - Class: 114
-      Script: {instanceID: 7238}
+      Script: {instanceID: 6752}
     - Class: 114
-      Script: {instanceID: 7594}
+      Script: {instanceID: 7242}
     - Class: 114
-      Script: {instanceID: 7720}
+      Script: {instanceID: 7598}
     - Class: 114
-      Script: {instanceID: 8006}
+      Script: {instanceID: 7724}
+    - Class: 114
+      Script: {instanceID: 8010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -344,25 +374,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3100}
     - Class: 114
-      Script: {instanceID: 4106}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 4894}
     - Class: 114
-      Script: {instanceID: 4996}
+      Script: {instanceID: 5000}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 5092}
     - Class: 114
-      Script: {instanceID: 5122}
+      Script: {instanceID: 5126}
     - Class: 114
-      Script: {instanceID: 5184}
+      Script: {instanceID: 5188}
     - Class: 114
-      Script: {instanceID: 5672}
+      Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 5826}
+      Script: {instanceID: 5830}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 6162}
     - Class: 114
-      Script: {instanceID: 6586}
+      Script: {instanceID: 6590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -451,27 +481,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 3582}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 4304}
+      Script: {instanceID: 3584}
     - Class: 114
-      Script: {instanceID: 4310}
+      Script: {instanceID: 4308}
     - Class: 114
-      Script: {instanceID: 4724}
+      Script: {instanceID: 4314}
     - Class: 114
-      Script: {instanceID: 5492}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5536}
+      Script: {instanceID: 5496}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 5540}
     - Class: 114
-      Script: {instanceID: 5672}
+      Script: {instanceID: 5542}
     - Class: 114
-      Script: {instanceID: 6108}
+      Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 6158}
+      Script: {instanceID: 6112}
     - Class: 114
-      Script: {instanceID: 7058}
+      Script: {instanceID: 6162}
+    - Class: 114
+      Script: {instanceID: 7062}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -529,7 +561,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 5d9597aac5ac7a389cc3de2f7a193f2b
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: Com.Kawaiisun.SimpleHostile
     className: Sway
   - hash:
       serializedVersion: 2
@@ -1121,6 +1153,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: 632731657c90f101a2dca0a2b7a6245c
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1221,6 +1259,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Com.Kawaiisun.SimpleHostile
+    className: Pause
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -1367,7 +1411,7 @@ ScriptsOnlyBuild:
     className: HealthDrzewo
   - hash:
       serializedVersion: 2
-      Hash: d38f2d13d64b39aa1444b7203091a757
+      Hash: ba2ebf600e27dbb010703ef6bc16b55a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bulletspawn
@@ -1801,7 +1845,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 74bdcd4edc7b7138e00d1782fb12e251
     assemblyName: Assembly-CSharp.dll
-    namespaceName: Com.IZI.Slide
+    namespaceName: Com.Kawaiisun.SimpleHostile
     className: Look
   - hash:
       serializedVersion: 2
@@ -1843,7 +1887,7 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
+    namespaceName: Com.Kawaiisun.SimpleHostile
     className: Main_Menu
   - hash:
       serializedVersion: 2
@@ -2409,4 +2453,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Multi.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Kamil/Desktop/gra/3d unity blender fps.exe
+  playerPath: D:/gierka build/3d unity blender fps.exe

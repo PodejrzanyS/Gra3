@@ -5535,6 +5535,7 @@ GameObject:
   - component: {fileID: 4521579485537435656}
   - component: {fileID: 4521579485537435659}
   - component: {fileID: 4521579485537435657}
+  - component: {fileID: 6030295977553376698}
   - component: {fileID: 4521579485537435662}
   - component: {fileID: 4521579485537435663}
   - component: {fileID: 4521579485537435660}
@@ -5605,6 +5606,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   coins: 0
+--- !u!114 &6030295977553376698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521579485537435658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339606e3f3489942a4e9d4f16451049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 7830534025635263834, guid: 0e99e6ee3b1e0e447bf4269e875e65f7, type: 3}
 --- !u!114 &4521579485537435662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5634,6 +5648,8 @@ MonoBehaviour:
   noz: {fileID: 8815941350008222165}
   canStab: 0
   nozAnimator: {fileID: 8815941350008222186}
+  zycie: 0
+  CzerwoneZycie: {fileID: 0}
   camTransform: {fileID: 4521579485022416702}
   shakeDuration: 0
   shakeAmount: 0.1

@@ -93,10 +93,32 @@ namespace Com.Kawaiisun.SimpleHostile
 
             bool sprint = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
             bool jump = Input.GetKey(KeyCode.Space);
+            bool pause = Input.GetKeyDown(KeyCode.Escape);
 
             bool isGrounded = Physics.Raycast(groundDetector.position, Vector3.down, 0.1f, ground);
             bool isJumping = jump && isGrounded;
             bool isSprinting = sprint && t_vmove > 0 && !isJumping && isGrounded;
+
+            //Pause
+            if (pause)
+            {
+
+                GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
+              
+            }
+            if (Pause.paused)
+            {
+                t_hmove = 0f;
+                t_vmove = 0f;
+                sprint = false;
+                jump = false;
+                pause = false;
+                isGrounded = false;
+                isJumping = false;
+                isSprinting = false;
+               
+
+            }
 
             if (Input.GetKeyDown(KeyCode.U)) TakeDamage(100,-1);
             
@@ -155,7 +177,22 @@ namespace Com.Kawaiisun.SimpleHostile
             //movement
             Vector3 t_direction = Vector3.zero;
             float t_adjustedSpeed = speed;
-            
+
+           
+            if(Pause.paused)
+            {
+                
+                t_hmove = 0f;
+                t_vmove = 0f;
+                sprint = false;
+                jump = false;
+                isGrounded = false;
+                isJumping = false;
+                isSprinting = false;
+                isSliding = false;
+                slide = false;
+
+            }
            
             
             if (!sliding) 
