@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
             else
             {
                 Cursor.lockState = CursorLockMode.None;
-                
+
                 Pause();
             }
         }
@@ -29,17 +29,39 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-      
+
 
     }
 
     void Pause()
     {
+
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void QuitGame()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        SceneManager.LoadScene(0);
+        
+    }
+    public void Resumee()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
 }
