@@ -42,6 +42,7 @@ namespace Com.Kawaiisun.SimpleHostile
         private Vector3 velocity;
         [HideInInspector]public ProfileData playerProfile;
         public TextMeshPro playerUsername;
+        public Transform LookAtMe;
         #endregion
 
         #region Monobehaviour Callback

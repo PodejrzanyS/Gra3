@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 3581931555235747538}
   m_Layer: 9
   m_Name: Normal Camera
-  m_TagString: Untagged
+  m_TagString: LookAt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,6 +508,7 @@ MonoBehaviour:
     level: 0
     xp: 0
   playerUsername: {fileID: 6762867499351959995}
+  LookAtMe: {fileID: 0}
 --- !u!114 &3581931556582733813
 MonoBehaviour:
   m_ObjectHideFlags: 0

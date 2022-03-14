@@ -13,6 +13,7 @@ TagManager:
   - gold
   - Shop
   - Ground
+  - LookAt
   layers:
   - Default
   - TransparentFX
