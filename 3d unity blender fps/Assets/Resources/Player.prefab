@@ -531,6 +531,11 @@ MonoBehaviour:
     m_Bits: 2167
   isAming: 0
   currency: 0
+  DoneDamage: 0
+  ui_currency: {fileID: 0}
+  ui_DoneDamage: {fileID: 0}
+  level: 0
+  expNeeded: 0
 --- !u!114 &-8326967141047283727
 MonoBehaviour:
   m_ObjectHideFlags: 0

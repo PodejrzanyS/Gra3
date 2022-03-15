@@ -62,13 +62,17 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.TextEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -162,7 +166,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7762}
     - Class: 114
-      Script: {instanceID: 27920}
+      Script: {instanceID: 28906}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -915,7 +919,7 @@ ScriptsOnlyBuild:
     className: RoomListItem
   - hash:
       serializedVersion: 2
-      Hash: c484bbaf4a8fd4eb6288b81fadfccc9e
+      Hash: a085c206980030863a49f92d32b412b3
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Weapon
@@ -999,7 +1003,7 @@ ScriptsOnlyBuild:
     className: OnClickInstantiate
   - hash:
       serializedVersion: 2
-      Hash: 85d41af3de49d07e4020a92fda60e24a
+      Hash: f526033b5e4b8095d35a014e93a5f10e
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Player
@@ -2169,7 +2173,7 @@ ScriptsOnlyBuild:
     className: AutoSyncSceneToggle
   - hash:
       serializedVersion: 2
-      Hash: b9ca9ec9ff2ac5403f54a536f9b549e9
+      Hash: 38c0503b9be0cefb2cde1e934f497ec2
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Manager
@@ -2473,4 +2477,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Multi.unity
   - Assets/Scenes/Game.unity
-  playerPath: D:/gierka build/3d unity blender fps.exe
+  playerPath: D:/gra multi test/3d unity blender fps.exe

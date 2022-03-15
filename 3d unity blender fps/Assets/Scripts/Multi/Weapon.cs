@@ -4,6 +4,10 @@ using UnityEngine;
 using System.Collections;
 using Photon.Pun;
 using UnityEngine.UI;
+using UnityEngine;
+using Photon.Pun;
+using UnityEngine.UI;
+using TMPro;
 
 namespace Com.Kawaiisun.SimpleHostile
 {
@@ -20,6 +24,13 @@ namespace Com.Kawaiisun.SimpleHostile
         private float currentCooldown;
         private bool isReloading;
         public int currency;
+        public int DoneDamage;
+        public Text ui_currency;
+        public Text ui_DoneDamage;
+        public int level;
+        private Transform ui_levelbar;
+        public int expNeeded;
+        private Text ui_level;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -36,12 +47,41 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             foreach (Gun a in loadout) a.Initialize();
             Equip(0);
+            level = 0;
+            expNeeded = 500;
+            RefreshLevelBar();
         }
 
         // Update is called once per frame
         void Update()
         {
-            PlayerPrefs.SetInt("Currency",currency);
+            PlayerPrefs.SetInt("Currency", currency);
+            PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+            currency = PlayerPrefs.GetInt("Currency");
+            DoneDamage = PlayerPrefs.GetInt("DoneDamage");
+
+
+            if (photonView.IsMine)
+            {
+                ui_levelbar = GameObject.Find("HUD/Health/levelbar").transform;
+                ui_level = GameObject.Find("HUD/Username/level").GetComponent<Text>();
+                ui_DoneDamage = GameObject.Find("HUD/Stats/DMG").GetComponent<Text>();
+                ui_currency = GameObject.Find("HUD/Stats/Currency").GetComponent<Text>();
+                ui_DoneDamage.text = $"Zadane obra¿enia: {DoneDamage}";
+                ui_currency.text = $"Gold: {currency}";
+
+                ui_level.text = $"LEVEL {level}";
+                if (DoneDamage >= 500)
+                {
+                    level = 1;
+                    expNeeded = 2500;
+                }
+                if (DoneDamage >= 2500)
+                {
+                    level = 2;
+                    expNeeded = 8000;
+                }
+            }
             if (Pause.paused && photonView.IsMine) return;
 
             if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha1)) { photonView.RPC("Equip", RpcTarget.All, 0); }
@@ -79,6 +119,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 //weapon position elastic
                 currentWeapon.transform.localPosition = Vector3.Lerp(currentWeapon.transform.localPosition, Vector3.zero, Time.deltaTime * 4f);
             }
+            RefreshLevelBar();
         }
 
         #region Public Metods
@@ -95,6 +136,11 @@ namespace Com.Kawaiisun.SimpleHostile
         #endregion
         #region Private Metods
 
+        void RefreshLevelBar()
+        {
+            int t_level_ratio = (int)DoneDamage / (int)expNeeded;
+            ui_levelbar.localScale = Vector3.Lerp(ui_levelbar.localScale, new Vector3(t_level_ratio, 1, 1), Time.deltaTime * 8f);
+        }
         IEnumerator Reload(float p_wait)
         {
             isReloading = true;
@@ -104,14 +150,14 @@ namespace Com.Kawaiisun.SimpleHostile
 
             loadout[currentIndex].Reload();
             currentWeapon.SetActive(true);
-            isReloading = false; 
+            isReloading = false;
         }
         [PunRPC]
         void Equip(int p_ind)
         {
             if (currentWeapon != null)
             {
-               //if(isReloading) StartCoroutine("Reload");
+                //if(isReloading) StartCoroutine("Reload");
                 Destroy(currentWeapon);
             }
 
@@ -151,7 +197,7 @@ namespace Com.Kawaiisun.SimpleHostile
             t_bloom -= t_spawn.position;
             t_bloom.Normalize();
 
-             //raycast
+            //raycast
             RaycastHit t_hit = new RaycastHit();
             if (Physics.Raycast(t_spawn.position, t_bloom, out t_hit, 1000f, canBeShot))
             {
@@ -159,33 +205,37 @@ namespace Com.Kawaiisun.SimpleHostile
                 t_newHole.transform.LookAt(t_hit.point + t_hit.normal);
                 Destroy(t_newHole, 5f);
 
-                if(photonView.IsMine)
+                if (photonView.IsMine)
                 {
 
                     //shooting other player on network
                     if (t_hit.collider.gameObject.layer == 11)
                     {
-                        currency += Random.Range(0, 1);
-                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage,PhotonNetwork.LocalPlayer.ActorNumber);
-                    
+
+                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage, PhotonNetwork.LocalPlayer.ActorNumber);
+                        currency += Random.Range(0, 2);
+                        DoneDamage += loadout[currentIndex].damage;
+
                     }
                 }
             }
             currentCooldown = loadout[currentIndex].firerate;
-            
+
             // gun fx
             currentWeapon.transform.Rotate(-loadout[currentIndex].recoil, 0, 0);
             currentWeapon.transform.position -= currentWeapon.transform.forward * loadout[currentIndex].kickback;
             //cooldown
-          
+
         }
         [PunRPC]
-        private void TakeDamage(int p_damage,int p_actor)
+        private void TakeDamage(int p_damage, int p_actor)
         {
-            GetComponent<Player>().TakeDamage(p_damage,p_actor);
+            GetComponent<Player>().TakeDamage(p_damage, p_actor);
         }
 
+
         #endregion
+     
     }
 
 }

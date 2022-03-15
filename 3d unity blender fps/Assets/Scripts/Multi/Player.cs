@@ -48,6 +48,7 @@ namespace Com.Kawaiisun.SimpleHostile
         #region Monobehaviour Callback
         private void Start()
         {
+            
             velocity = rig.velocity;
             manager = GameObject.Find("Manager").GetComponent<Manager>();
             weapon = GetComponent<Weapon>();
@@ -73,6 +74,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
                 ui_ammo = GameObject.Find("HUD/Ammo/Text").GetComponent<Text>();
                 ui_username = GameObject.Find("HUD/Username/Text").GetComponent<TMP_Text>();
+
                 RefreshHealthBar();
 
                 ui_username.text = Launcher.myProfile.username;
@@ -155,9 +157,11 @@ namespace Com.Kawaiisun.SimpleHostile
                 weaponParent.localPosition = Vector3.Lerp(weaponParent.localPosition, targetWeaponBobPosition, Time.deltaTime * 10f);
             }
 
+         
             //UI refreshes
 
             RefreshHealthBar();
+
             weapon.RefreshAmmo(ui_ammo);
 
         }
@@ -263,6 +267,7 @@ namespace Com.Kawaiisun.SimpleHostile
             ui_healthbar.localScale =Vector3.Lerp( ui_healthbar.localScale ,new Vector3(t_health_ratio, 1, 1),Time.deltaTime*8f);
         }
 
+       
         #endregion
 
 

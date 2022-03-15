@@ -30,7 +30,9 @@ namespace Com.Kawaiisun.SimpleHostile
 
     public class Manager : MonoBehaviour, IOnEventCallback
     {
-     
+
+        public int currency;
+        public int DoneDamage;
         public enum EventCodes : byte
         {
             NewPlayer,
@@ -52,6 +54,10 @@ namespace Com.Kawaiisun.SimpleHostile
             InitializeUI();
             NewPlayer_S(Launcher.myProfile);
             Spawn();
+        }
+        public void Update()
+        {
+            
         }
         public void Spawn()
         {
@@ -226,6 +232,7 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             ui_mykills = GameObject.Find("HUD/Stats/Kills/Text").GetComponent<TMP_Text>();
             ui_mydeaths = GameObject.Find("HUD/Stats/Deaths/Text").GetComponent<TMP_Text>();
+            
 
             RefreshMyStats();
 
