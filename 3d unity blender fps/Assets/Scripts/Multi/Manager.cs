@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -6,7 +7,7 @@ using UnityEngine.SceneManagement;
 using Photon.Realtime;
 using ExitGames.Client.Photon;
 using TMPro;
-using UnityEngine.UI;
+
 namespace Com.Kawaiisun.SimpleHostile
 {
     public class PlayerInfo
@@ -62,8 +63,8 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             if (photonEvent.Code >= 200) return;
 
-            EventCodes e = (EventCodes)photonEvent.Code;
-            object[] o = (object[])photonEvent.CustomData;
+            EventCodes e = (EventCodes) photonEvent.Code;
+            object[] o = (object[]) photonEvent.CustomData;
 
             switch (e)
             {
@@ -90,7 +91,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         public void NewPlayer_S(ProfileData p)
         {
-            object[] package = new object[7];
+            object[] package = new object[6];
 
             package[0] = p.username;
             package[1] = p.level;
@@ -99,12 +100,7 @@ namespace Com.Kawaiisun.SimpleHostile
             package[4] = (short)0;
             package[5] = (short)0;
 
-            PhotonNetwork.RaiseEvent(
-                (byte)EventCodes.NewPlayer,
-                package,
-                new RaiseEventOptions { Receivers = ReceiverGroup.MasterClient },
-                new SendOptions { Reliability = true }
-            );
+            NewPlayer_R(package);
         }
 
 
@@ -114,13 +110,13 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             PlayerInfo p = new PlayerInfo(
                 new ProfileData(
-                    (string)data[0],
-                    (int)data[1],
-                    (int)data[2]
+                    (string) data[0],
+                    (int) data[1],
+                    (int) data[2]
                 ),
-                (int)data[3],
-                (short)data[4],
-                (short)data[5]
+                (int) data[3],
+                (short) data[4],
+                (short) data[5]
             );
 
             playerInfo.Add(p);
@@ -131,11 +127,11 @@ namespace Com.Kawaiisun.SimpleHostile
 
         public void UpdatePlayers_S(List<PlayerInfo> info)
         {
-            object[] package = new object[info.Count + 1];
+            object[] package = new object[info.Count];
 
             for (int i = 0; i < info.Count; i++)
             {
-                object[] piece = new object[7];
+                object[] piece = new object[6];
 
                 piece[0] = info[i].profile.username;
                 piece[1] = info[i].profile.level;
@@ -144,16 +140,15 @@ namespace Com.Kawaiisun.SimpleHostile
                 piece[4] = info[i].kills;
                 piece[5] = info[i].deaths;
 
+                Debug.Log(piece[4]);
+                Debug.Log(piece[5]);
+
                 package[i] = piece;
             }
 
-            PhotonNetwork.RaiseEvent(
-                (byte)EventCodes.UpdatePlayers,
-                package,
-                new RaiseEventOptions { Receivers = ReceiverGroup.All },
-                new SendOptions { Reliability = true }
-            );
             UpdatePlayers_R(package);
+
+
         }
 
         public void UpdatePlayers_R(object[] data)
@@ -162,7 +157,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             for (int i = 0; i < data.Length; i++)
             {
-                object[] extract = (object[])data[i];
+                object[] extract = (object[]) data[i];
 
                 PlayerInfo p = new PlayerInfo(
                     new ProfileData(
@@ -174,10 +169,14 @@ namespace Com.Kawaiisun.SimpleHostile
                     (short)extract[4],
                     (short)extract[5]
                     );
+
+
                 playerInfo.Add(p);
                
                 if (PhotonNetwork.LocalPlayer.ActorNumber == p.actor) myind = i;
             }
+
+            
 
         }
 
@@ -186,13 +185,9 @@ namespace Com.Kawaiisun.SimpleHostile
             Debug.Log("zmiana");
             object[] package = new object[] { actor, stat, amt };
 
-            PhotonNetwork.RaiseEvent(
-                (byte)EventCodes.ChangeStat,
-                package,
-                new RaiseEventOptions { Receivers = ReceiverGroup.All },
-                new SendOptions { Reliability = true }
-            );
             ChangeStat_R(package);
+
+
         }
         public void ChangeStat_R(object[] data)
         {

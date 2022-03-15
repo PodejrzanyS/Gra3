@@ -283,6 +283,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
                     if (p_actor >= 0)
                         manager.ChangeStat_S(p_actor, 0, 1);
+
                     PhotonNetwork.Destroy(gameObject);
                 }
             }
