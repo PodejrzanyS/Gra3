@@ -279,6 +279,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 {
                     manager.Spawn();
                     manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
+                    Debug.Log("dead");
 
                     if (p_actor >= 0)
                         manager.ChangeStat_S(p_actor, 0, 1);

@@ -530,6 +530,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2167
   isAming: 0
+  currency: 0
 --- !u!114 &-8326967141047283727
 MonoBehaviour:
   m_ObjectHideFlags: 0

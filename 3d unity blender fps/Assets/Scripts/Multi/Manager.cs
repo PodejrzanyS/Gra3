@@ -153,6 +153,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 new RaiseEventOptions { Receivers = ReceiverGroup.All },
                 new SendOptions { Reliability = true }
             );
+            UpdatePlayers_R(package);
         }
 
         public void UpdatePlayers_R(object[] data)
@@ -174,7 +175,7 @@ namespace Com.Kawaiisun.SimpleHostile
                     (short)extract[5]
                     );
                 playerInfo.Add(p);
-
+               
                 if (PhotonNetwork.LocalPlayer.ActorNumber == p.actor) myind = i;
             }
 
@@ -182,6 +183,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         public void ChangeStat_S(int actor, byte stat, byte amt)
         {
+            Debug.Log("zmiana");
             object[] package = new object[] { actor, stat, amt };
 
             PhotonNetwork.RaiseEvent(
@@ -190,25 +192,30 @@ namespace Com.Kawaiisun.SimpleHostile
                 new RaiseEventOptions { Receivers = ReceiverGroup.All },
                 new SendOptions { Reliability = true }
             );
+            ChangeStat_R(package);
         }
         public void ChangeStat_R(object[] data)
         {
+            Debug.Log("zmiana2");
             int actor = (int)data[0];
             byte stat = (byte)data[1];
             byte amt = (byte)data[2];
-
+            Debug.Log(playerInfo.Count);
             for (int i = 0; i < playerInfo.Count; i++)
             {
+                Debug.Log("for");
                 if (playerInfo[i].actor == actor)
                 {
                     switch (stat)
                     {
                         case 0: //kills
+                            Debug.Log("kill++");
                             playerInfo[i].kills += amt;
                             Debug.Log($"Player {playerInfo[i].profile.username} : kills = {playerInfo[i].kills}");
                             break;
 
                         case 1: //deaths
+                            Debug.Log("death++");
                             playerInfo[i].deaths += amt;
                             Debug.Log($"Player {playerInfo[i].profile.username} : deaths = {playerInfo[i].deaths}");
                             break;

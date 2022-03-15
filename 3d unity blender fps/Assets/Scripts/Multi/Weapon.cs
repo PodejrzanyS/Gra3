@@ -19,11 +19,19 @@ namespace Com.Kawaiisun.SimpleHostile
         public bool isAming = false;
         private float currentCooldown;
         private bool isReloading;
-        
+        public int currency;
         #endregion
         #region MonoHehaviour Callbacks
 
+        public void OnEnable()
+        {
+            PhotonNetwork.AddCallbackTarget(this);
+        }
 
+        public void OnDisable()
+        {
+            PhotonNetwork.RemoveCallbackTarget(this);
+        }
         private void Start()
         {
             foreach (Gun a in loadout) a.Initialize();
@@ -33,6 +41,7 @@ namespace Com.Kawaiisun.SimpleHostile
         // Update is called once per frame
         void Update()
         {
+            PlayerPrefs.SetInt("Currency",currency);
             if (Pause.paused && photonView.IsMine) return;
 
             if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha1)) { photonView.RPC("Equip", RpcTarget.All, 0); }
@@ -156,6 +165,7 @@ namespace Com.Kawaiisun.SimpleHostile
                     //shooting other player on network
                     if (t_hit.collider.gameObject.layer == 11)
                     {
+                        currency += Random.Range(0, 1);
                         t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage,PhotonNetwork.LocalPlayer.ActorNumber);
                     
                     }
