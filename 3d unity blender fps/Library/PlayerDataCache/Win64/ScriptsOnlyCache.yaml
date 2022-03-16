@@ -43,8 +43,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -71,6 +69,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.SliderEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -146,6 +146,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3944}
     - Class: 114
+      Script: {instanceID: 5010}
+    - Class: 114
       Script: {instanceID: 5092}
     - Class: 114
       Script: {instanceID: 5362}
@@ -164,7 +166,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7602}
     - Class: 114
-      Script: {instanceID: 29940}
+      Script: {instanceID: 26916}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -917,7 +919,7 @@ ScriptsOnlyBuild:
     className: RoomListItem
   - hash:
       serializedVersion: 2
-      Hash: ea6fabc3b712ed87149835844f3bda3e
+      Hash: ce9277332376bf0dd228b45d7588f575
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Weapon

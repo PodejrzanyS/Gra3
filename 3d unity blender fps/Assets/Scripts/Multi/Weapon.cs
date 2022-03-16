@@ -28,9 +28,12 @@ namespace Com.Kawaiisun.SimpleHostile
         public Text ui_currency;
         public Text ui_DoneDamage;
         public int level;
-        private Transform ui_levelbar;
+        private Slider ui_levelbar;
         public int expNeeded;
         private Text ui_level;
+        public int curr;
+        public int diddamage;
+        public int lvl;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -45,42 +48,66 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         private void Start()
         {
+            lvl = PlayerPrefs.GetInt("level");
             foreach (Gun a in loadout) a.Initialize();
             Equip(0);
-            level = 0;
-            DoneDamage = 0;
-            expNeeded = 500;
+            if (lvl == 0)
+            {
+                level = 0;
+                expNeeded = 500;
+            }
+            else
+            {
+                level = lvl;
+                
+            }
+            
         }
 
         // Update is called once per frame
         void Update()
         {
+            lvl = PlayerPrefs.GetInt("level");
+            curr = PlayerPrefs.GetInt("Currency");
+            diddamage = PlayerPrefs.GetInt("DoneDamage");
            
-            PlayerPrefs.SetInt("Currency", currency);
-            PlayerPrefs.SetInt("DoneDamage", DoneDamage);
-            currency = PlayerPrefs.GetInt("Currency");
-            DoneDamage = PlayerPrefs.GetInt("DoneDamage");
-            PlayerPrefs.Save();
 
             if (photonView.IsMine)
             {
-                ui_levelbar = GameObject.Find("HUD/Health/levelbar").transform;
+                ui_levelbar = GameObject.Find("HUD/Health/levelbar").GetComponent<Slider>();
                 ui_level = GameObject.Find("HUD/Username/level").GetComponent<Text>();
                 ui_DoneDamage = GameObject.Find("HUD/Stats/DMG").GetComponent<Text>();
                 ui_currency = GameObject.Find("HUD/Stats/Currency").GetComponent<Text>();
-                ui_DoneDamage.text = $"Zadane obra¿enia: {DoneDamage}";
-                ui_currency.text = $"Gold: {currency}";
+                ui_DoneDamage.text = $"Zadane obra¿enia: {diddamage}";
+                ui_currency.text = $"Gold: {curr}";
 
-                ui_level.text = $"LEVEL {level}";
+                ui_level.text = $"LEVEL {lvl}";
                 if (DoneDamage >= 500)
                 {
                     level = 1;
+                    PlayerPrefs.SetInt("level", level);
                     expNeeded = 2500;
+                    DoneDamage = 0;
+                    PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                    PlayerPrefs.Save();
                 }
                 if (DoneDamage >= 2500)
                 {
                     level = 2;
+                    PlayerPrefs.SetInt("level", level);
                     expNeeded = 8000;
+                    DoneDamage = 0;
+                    PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                    PlayerPrefs.Save();
+                }
+                if (DoneDamage >= 8000)
+                {
+                    level = 3;
+                    PlayerPrefs.SetInt("level", level);
+                    expNeeded = 20000;
+                    DoneDamage = 0;
+                    PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                    PlayerPrefs.Save();
                 }
                 RefreshLevelBar();
             }
@@ -121,9 +148,8 @@ namespace Com.Kawaiisun.SimpleHostile
                 //weapon position elastic
                 currentWeapon.transform.localPosition = Vector3.Lerp(currentWeapon.transform.localPosition, Vector3.zero, Time.deltaTime * 4f);
             }
-            Debug.Log((int)DoneDamage / (int)expNeeded);
-            Debug.Log(DoneDamage);
-            Debug.Log(expNeeded);
+          
+            PlayerPrefs.Save();
         }
 
         #region Public Metods
@@ -142,8 +168,8 @@ namespace Com.Kawaiisun.SimpleHostile
 
         void RefreshLevelBar()
         {
-            int t_level_ratio = (int)DoneDamage / (int)expNeeded;
-            ui_levelbar.localScale = Vector3.Lerp(ui_levelbar.localScale, new Vector3(t_level_ratio, 1, 1), Time.deltaTime * 8f);
+            float t_level_ratio = (float)DoneDamage / (float)expNeeded;
+            ui_levelbar.value = t_level_ratio; 
         }
         IEnumerator Reload(float p_wait)
         {
@@ -217,8 +243,11 @@ namespace Com.Kawaiisun.SimpleHostile
                     {
 
                         t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage, PhotonNetwork.LocalPlayer.ActorNumber);
-                        currency += Random.Range(0, 2);
-                        DoneDamage += loadout[currentIndex].damage;
+                        currency =curr + Random.Range(0, 2);
+                        DoneDamage = loadout[currentIndex].damage + diddamage;
+                        RefreshLevelBar();
+                        PlayerPrefs.SetInt("Currency", currency);
+                        PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                         PlayerPrefs.Save();
 
                     }
