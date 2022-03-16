@@ -48,18 +48,19 @@ namespace Com.Kawaiisun.SimpleHostile
             foreach (Gun a in loadout) a.Initialize();
             Equip(0);
             level = 0;
+            DoneDamage = 0;
             expNeeded = 500;
-            RefreshLevelBar();
         }
 
         // Update is called once per frame
         void Update()
         {
+           
             PlayerPrefs.SetInt("Currency", currency);
             PlayerPrefs.SetInt("DoneDamage", DoneDamage);
             currency = PlayerPrefs.GetInt("Currency");
             DoneDamage = PlayerPrefs.GetInt("DoneDamage");
-
+            PlayerPrefs.Save();
 
             if (photonView.IsMine)
             {
@@ -81,6 +82,7 @@ namespace Com.Kawaiisun.SimpleHostile
                     level = 2;
                     expNeeded = 8000;
                 }
+                RefreshLevelBar();
             }
             if (Pause.paused && photonView.IsMine) return;
 
@@ -119,7 +121,9 @@ namespace Com.Kawaiisun.SimpleHostile
                 //weapon position elastic
                 currentWeapon.transform.localPosition = Vector3.Lerp(currentWeapon.transform.localPosition, Vector3.zero, Time.deltaTime * 4f);
             }
-            RefreshLevelBar();
+            Debug.Log((int)DoneDamage / (int)expNeeded);
+            Debug.Log(DoneDamage);
+            Debug.Log(expNeeded);
         }
 
         #region Public Metods
@@ -215,6 +219,7 @@ namespace Com.Kawaiisun.SimpleHostile
                         t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage, PhotonNetwork.LocalPlayer.ActorNumber);
                         currency += Random.Range(0, 2);
                         DoneDamage += loadout[currentIndex].damage;
+                        PlayerPrefs.Save();
 
                     }
                 }
