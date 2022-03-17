@@ -489,10 +489,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b5e488c471d1944812f9f2316dad3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
-  sprintModifier: 2.5
+  speed: 222
+  sprintModifier: 2
   jumpForce: 250
-  slideModifier: 2
+  slideModifier: 1
   max_health: 100
   weaponParent: {fileID: 3581931556254457903}
   groundDetector: {fileID: 3581931556486980224}
@@ -502,13 +502,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rig: {fileID: 3581931556582733820}
-  lengthofSlide: 1
+  lengthofSlide: 0.5
   playerProfile:
     username: DEFAULT USERNAME
     level: 0
     xp: 0
   playerUsername: {fileID: 6762867499351959995}
   LookAtMe: {fileID: 0}
+  lvl: 0
 --- !u!114 &3581931556582733813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,6 +541,7 @@ MonoBehaviour:
   diddamage: 0
   lvl: 0
   LevelUpText: {fileID: 0}
+  HealthAndDamage: {fileID: 0}
 --- !u!114 &-8326967141047283727
 MonoBehaviour:
   m_ObjectHideFlags: 0

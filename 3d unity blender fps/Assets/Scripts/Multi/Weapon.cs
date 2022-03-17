@@ -35,6 +35,8 @@ namespace Com.Kawaiisun.SimpleHostile
         public int diddamage;
         public int lvl;
         public Text LevelUpText;
+        public Text HealthAndDamage;
+        private GameObject NEWLEVEL;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -49,12 +51,26 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         private void Start()
         {
+            lvl = PlayerPrefs.GetInt("level");
+            curr = PlayerPrefs.GetInt("Currency");
+            diddamage = PlayerPrefs.GetInt("DoneDamage");
             if (photonView.IsMine)
             {
+                ui_levelbar = GameObject.Find("HUD/Health/levelbar").GetComponent<Slider>();
+                ui_level = GameObject.Find("HUD/Username/level").GetComponent<Text>();
+                ui_DoneDamage = GameObject.Find("HUD/Stats/DMG").GetComponent<Text>();
+                ui_currency = GameObject.Find("HUD/Stats/Currency").GetComponent<Text>();
                 LevelUpText = GameObject.Find("HUD/LevelUpText").GetComponent<Text>();
+                HealthAndDamage = GameObject.Find("HUD/Damage+Health").GetComponent<Text>();
                 LevelUpText.enabled = false;
+                HealthAndDamage.enabled = false;
+                ui_DoneDamage.text = $"Zadane obra¿enia: {diddamage}";
+                ui_currency.text = $"Gold: {curr}";
+                NEWLEVEL = GameObject.Find("NEWLEVEL");
+                ui_level.text = $"LEVEL {lvl}";
+                NEWLEVEL.SetActive(true);
             }
-            lvl = PlayerPrefs.GetInt("level");
+            
             foreach (Gun a in loadout) a.Initialize();
             Equip(0);
             if (lvl == 0)
@@ -76,21 +92,29 @@ namespace Com.Kawaiisun.SimpleHostile
             lvl = PlayerPrefs.GetInt("level");
             curr = PlayerPrefs.GetInt("Currency");
             diddamage = PlayerPrefs.GetInt("DoneDamage");
-           
+
 
             if (photonView.IsMine)
             {
+                NEWLEVEL = GameObject.Find("NEWLEVEL");
                 LevelUpText = GameObject.Find("HUD/LevelUpText").GetComponent<Text>();
+                HealthAndDamage = GameObject.Find("HUD/Damage+Health").GetComponent<Text>();
                 ui_levelbar = GameObject.Find("HUD/Health/levelbar").GetComponent<Slider>();
                 ui_level = GameObject.Find("HUD/Username/level").GetComponent<Text>();
                 ui_DoneDamage = GameObject.Find("HUD/Stats/DMG").GetComponent<Text>();
                 ui_currency = GameObject.Find("HUD/Stats/Currency").GetComponent<Text>();
                 ui_DoneDamage.text = $"Zadane obra¿enia: {diddamage}";
                 ui_currency.text = $"Gold: {curr}";
-
                 ui_level.text = $"LEVEL {lvl}";
                 levelUp();
                 RefreshLevelBar();
+
+                if (level >= 1)
+                {
+                    
+                }
+
+
             }
             if (Pause.paused && photonView.IsMine) return;
 
@@ -137,8 +161,28 @@ namespace Com.Kawaiisun.SimpleHostile
         IEnumerator MyIEnumerator()
         {
             LevelUpText.enabled = true;
-            yield return new WaitForSeconds(3);
+            HealthAndDamage.enabled = true;
+            yield return new WaitForSeconds(1);
             LevelUpText.enabled = false;
+            HealthAndDamage.enabled = false;
+            yield return new WaitForSeconds(1);
+            LevelUpText.enabled = true;
+            HealthAndDamage.enabled = true;
+            yield return new WaitForSeconds(1);
+            LevelUpText.enabled = false;
+            HealthAndDamage.enabled = false;
+            yield return new WaitForSeconds(1);
+            LevelUpText.enabled = true;
+            HealthAndDamage.enabled = true;
+            yield return new WaitForSeconds(1);
+            LevelUpText.enabled = false;
+            HealthAndDamage.enabled = false;
+            yield return new WaitForSeconds(1);
+            LevelUpText.enabled = true;
+            HealthAndDamage.enabled = true;
+            yield return new WaitForSeconds(1);
+            LevelUpText.enabled = false;
+            HealthAndDamage.enabled = false;
         }
         public void levelUp()
         {
@@ -168,6 +212,24 @@ namespace Com.Kawaiisun.SimpleHostile
                 level = 3;
                 PlayerPrefs.SetInt("level", level);
                 expNeeded = 20000;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 20000)
+            {
+                level = 4;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 100000;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 100000)
+            {
+                level = 5;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 1000000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                 PlayerPrefs.Save();
@@ -262,10 +324,11 @@ namespace Com.Kawaiisun.SimpleHostile
                     if (t_hit.collider.gameObject.layer == 11)
                     {
 
-                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage, PhotonNetwork.LocalPlayer.ActorNumber);
+                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage + (lvl*4), PhotonNetwork.LocalPlayer.ActorNumber);
                         currency =curr + Random.Range(0, 2);
                         DoneDamage = loadout[currentIndex].damage + diddamage;
                         RefreshLevelBar();
+                        Debug.Log(loadout[currentIndex].damage + (lvl * 4));
                         PlayerPrefs.SetInt("Currency", currency);
                         PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                         PlayerPrefs.Save();

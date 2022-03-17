@@ -43,6 +43,7 @@ namespace Com.Kawaiisun.SimpleHostile
         [HideInInspector]public ProfileData playerProfile;
         public TextMeshPro playerUsername;
         public Transform LookAtMe;
+        public int lvl;
         #endregion
 
         #region Monobehaviour Callback
@@ -52,7 +53,7 @@ namespace Com.Kawaiisun.SimpleHostile
             velocity = rig.velocity;
             manager = GameObject.Find("Manager").GetComponent<Manager>();
             weapon = GetComponent<Weapon>();
-            current_health = max_health;
+           
 
 
             cameraParent.SetActive(photonView.IsMine);
@@ -71,6 +72,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             if (photonView.IsMine)
             {
+                lvl = PlayerPrefs.GetInt("level");
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
                 ui_ammo = GameObject.Find("HUD/Ammo/Text").GetComponent<Text>();
                 ui_username = GameObject.Find("HUD/Username/Text").GetComponent<TMP_Text>();
@@ -79,8 +81,9 @@ namespace Com.Kawaiisun.SimpleHostile
 
                 ui_username.text = Launcher.myProfile.username;
 
-                photonView.RPC("SyncProfile", RpcTarget.All, Launcher.myProfile.username,Launcher.myProfile.level,Launcher.myProfile.xp);
+                photonView.RPC("SyncProfile", RpcTarget.All, Launcher.myProfile.username, Launcher.myProfile.level, Launcher.myProfile.xp);
             }
+            current_health = max_health + lvl*20;
         }
         [PunRPC]
         private void SyncProfile(string p_username,int p_level,int p_xp)
@@ -91,6 +94,7 @@ namespace Com.Kawaiisun.SimpleHostile
         private void Update()
         {
             if (!photonView.IsMine) return;
+            lvl = PlayerPrefs.GetInt("level");
             float t_hmove = Input.GetAxis("Horizontal");
             float t_vmove = Input.GetAxis("Vertical");
 
@@ -284,7 +288,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 {
                     manager.Spawn();
                     manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
-                    Debug.Log("dead");
+                    Debug.Log("dead"+Launcher.myProfile.username);
 
                     if (p_actor >= 0)
                         manager.ChangeStat_S(p_actor, 0, 1);
