@@ -539,6 +539,7 @@ MonoBehaviour:
   curr: 0
   diddamage: 0
   lvl: 0
+  LevelUpText: {fileID: 0}
 --- !u!114 &-8326967141047283727
 MonoBehaviour:
   m_ObjectHideFlags: 0

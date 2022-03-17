@@ -69,6 +69,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.TextEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -164,7 +166,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7762}
     - Class: 114
-      Script: {instanceID: 29076}
+      Script: {instanceID: 28066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,6 +221,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -350,8 +354,6 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -917,7 +919,7 @@ ScriptsOnlyBuild:
     className: RoomListItem
   - hash:
       serializedVersion: 2
-      Hash: 9164d16300f3426d15f8da8d791f68da
+      Hash: 2bffa852ffb77f46395136a59111db2e
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Weapon
@@ -2475,4 +2477,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Multi.unity
   - Assets/Scenes/Game.unity
-  playerPath: D:/gierka build/3d unity blender fps.exe
+  playerPath: D:/gra multi test/3d unity blender fps.exe

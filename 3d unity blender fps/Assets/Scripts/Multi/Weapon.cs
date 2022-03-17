@@ -34,6 +34,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public int curr;
         public int diddamage;
         public int lvl;
+        public Text LevelUpText;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -48,6 +49,11 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         private void Start()
         {
+            if (photonView.IsMine)
+            {
+                LevelUpText = GameObject.Find("HUD/LevelUpText").GetComponent<Text>();
+                LevelUpText.enabled = false;
+            }
             lvl = PlayerPrefs.GetInt("level");
             foreach (Gun a in loadout) a.Initialize();
             Equip(0);
@@ -74,6 +80,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             if (photonView.IsMine)
             {
+                LevelUpText = GameObject.Find("HUD/LevelUpText").GetComponent<Text>();
                 ui_levelbar = GameObject.Find("HUD/Health/levelbar").GetComponent<Slider>();
                 ui_level = GameObject.Find("HUD/Username/level").GetComponent<Text>();
                 ui_DoneDamage = GameObject.Find("HUD/Stats/DMG").GetComponent<Text>();
@@ -82,33 +89,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_currency.text = $"Gold: {curr}";
 
                 ui_level.text = $"LEVEL {lvl}";
-                if (DoneDamage >= 500)
-                {
-                    level = 1;
-                    PlayerPrefs.SetInt("level", level);
-                    expNeeded = 2500;
-                    DoneDamage = 0;
-                    PlayerPrefs.SetInt("DoneDamage", DoneDamage);
-                    PlayerPrefs.Save();
-                }
-                if (DoneDamage >= 2500)
-                {
-                    level = 2;
-                    PlayerPrefs.SetInt("level", level);
-                    expNeeded = 8000;
-                    DoneDamage = 0;
-                    PlayerPrefs.SetInt("DoneDamage", DoneDamage);
-                    PlayerPrefs.Save();
-                }
-                if (DoneDamage >= 8000)
-                {
-                    level = 3;
-                    PlayerPrefs.SetInt("level", level);
-                    expNeeded = 20000;
-                    DoneDamage = 0;
-                    PlayerPrefs.SetInt("DoneDamage", DoneDamage);
-                    PlayerPrefs.Save();
-                }
+                levelUp();
                 RefreshLevelBar();
             }
             if (Pause.paused && photonView.IsMine) return;
@@ -153,6 +134,45 @@ namespace Com.Kawaiisun.SimpleHostile
         }
 
         #region Public Metods
+        IEnumerator MyIEnumerator()
+        {
+            LevelUpText.enabled = true;
+            yield return new WaitForSeconds(3);
+            LevelUpText.enabled = false;
+        }
+        public void levelUp()
+        {
+            if (DoneDamage >= 500)
+            {
+                
+                level = 1;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 2500;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+                
+            }
+            if (DoneDamage >= 2500)
+            {
+                level = 2;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 8000;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 8000)
+            {
+                level = 3;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 20000;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+        }
         public void RefreshAmmo(Text p_text)
         {
             int t_clip = loadout[currentIndex].GetClip();
