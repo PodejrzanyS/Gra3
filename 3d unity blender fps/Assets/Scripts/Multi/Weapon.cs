@@ -68,7 +68,6 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_currency.text = $"Gold: {curr}";
                 NEWLEVEL = GameObject.Find("NEWLEVEL");
                 ui_level.text = $"LEVEL {lvl}";
-                NEWLEVEL.SetActive(true);
             }
             
             foreach (Gun a in loadout) a.Initialize();
