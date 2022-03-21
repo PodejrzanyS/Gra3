@@ -46,6 +46,8 @@ namespace Com.Kawaiisun.SimpleHostile
         public int lvl;
         public int kills;
         public static GameObject scoreboard;
+        public bool animating = false;
+        private Animator anim;
         #endregion
 
         #region Monobehaviour Callback
@@ -77,8 +79,8 @@ namespace Com.Kawaiisun.SimpleHostile
             if (photonView.IsMine)
             {
 
-             
-           
+
+                anim = GetComponent<Animator>();
                 lvl = PlayerPrefs.GetInt("level");
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
                 ui_ammo = GameObject.Find("HUD/Ammo/Text").GetComponent<Text>();
@@ -106,7 +108,7 @@ namespace Com.Kawaiisun.SimpleHostile
             lvl = PlayerPrefs.GetInt("level");
             float t_hmove = Input.GetAxis("Horizontal");
             float t_vmove = Input.GetAxis("Vertical");
-
+        
             bool sprint = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
             bool jump = Input.GetKey(KeyCode.Space);
             bool pause = Input.GetKeyDown(KeyCode.Escape);
@@ -114,7 +116,7 @@ namespace Com.Kawaiisun.SimpleHostile
             bool isGrounded = Physics.Raycast(groundDetector.position, Vector3.down, 0.1f, ground);
             bool isJumping = jump && isGrounded;
             bool isSprinting = sprint && t_vmove > 0 && !isJumping && isGrounded;
-
+            bool isMoving = t_vmove > 0 && isGrounded;
             //Pause
             if (pause)
             {
@@ -137,9 +139,13 @@ namespace Com.Kawaiisun.SimpleHostile
             }
 
             if (Input.GetKeyDown(KeyCode.U)) TakeDamage(100,-1);
-            
+            if(Input.GetKey(KeyCode.Space))
+            {
+                GetComponent<Animator>().Play("Jump");
+            }
             if (isJumping && rig.velocity.y <= 0)
             {
+                
                 velocity.y = 0.2f;
                 rig.velocity = velocity;
                 rig.AddForce(Vector3.up * jumpForce);
@@ -177,9 +183,18 @@ namespace Com.Kawaiisun.SimpleHostile
                 scoreboard.SetActive(false);
             }
 
-                //UI refreshes
+           
 
-                RefreshHealthBar();
+           
+                if(isMoving && !(GetComponent<Animator>().GetNextAnimatorStateInfo(0).length > GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime))
+                {
+
+                    GetComponent<Animator>().Play("Move");
+
+                }
+                
+
+            RefreshHealthBar();
 
             weapon.RefreshAmmo(ui_ammo);
 
@@ -202,10 +217,10 @@ namespace Com.Kawaiisun.SimpleHostile
             Vector3 t_direction = Vector3.zero;
             float t_adjustedSpeed = speed;
 
-           
-            if(Pause.paused)
+
+            if (Pause.paused)
             {
-                
+
                 t_hmove = 0f;
                 t_vmove = 0f;
                 sprint = false;
@@ -217,15 +232,16 @@ namespace Com.Kawaiisun.SimpleHostile
                 slide = false;
 
             }
-           
-            
-            if (!sliding) 
+
+
+            if (!sliding)
             {
+
                 t_direction = new Vector3(t_hmove, 0, t_vmove);
                 //t_direction.Normalize();
                 t_direction = transform.TransformDirection(t_direction);
 
-              
+
                 if (isSprinting) t_adjustedSpeed *= sprintModifier;
             }
             else
@@ -241,7 +257,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             }
 
-            Vector3 t_targetVelocity = t_direction * t_adjustedSpeed * Time.deltaTime ;
+            Vector3 t_targetVelocity = t_direction * t_adjustedSpeed * Time.deltaTime;
             t_targetVelocity.y = rig.velocity.y;
             rig.velocity = t_targetVelocity;
 
@@ -256,10 +272,10 @@ namespace Com.Kawaiisun.SimpleHostile
             }
 
             // camera stuff
-            if (sliding) 
+            if (sliding)
             {
                 normalCam.fieldOfView = Mathf.Lerp(normalCam.fieldOfView, baseFOV * sprintFOVModifier * 1.25f, Time.deltaTime * 8f);
-                normalCam.transform.localPosition = Vector3.Lerp(normalCam.transform.localPosition, origin + Vector3.down * 0.5f,Time.deltaTime * 6f);
+                normalCam.transform.localPosition = Vector3.Lerp(normalCam.transform.localPosition, origin + Vector3.down * 0.5f, Time.deltaTime * 6f);
             }
             else
             {
@@ -269,10 +285,21 @@ namespace Com.Kawaiisun.SimpleHostile
 
                 normalCam.transform.localPosition = Vector3.Lerp(normalCam.transform.localPosition, origin, Time.deltaTime * 6f);
             }
+            float t_anim_horizontal = 0f;
+            float t_anim_vertical = 0f;
+
+            if (isGrounded)
+            {
+                t_anim_horizontal = t_direction.x;
+                t_anim_vertical = t_direction.z;
+            }
+            anim.SetFloat("Horizontal", t_anim_horizontal);
+            anim.SetFloat("Vertical", t_anim_vertical);
         }
         #endregion
 
         #region Private Methods
+
         void HeadBob(float p_z, float p_x_intensity, float p_y_intensity)
         {
             float t_aim_adjust = 1f;
@@ -286,13 +313,13 @@ namespace Com.Kawaiisun.SimpleHostile
             ui_healthbar.localScale =Vector3.Lerp( ui_healthbar.localScale ,new Vector3(t_health_ratio, 1, 1),Time.deltaTime*8f);
         }
 
-       
+
         #endregion
 
 
         #region public methods
 
-
+       
         public void TakeDamage(int p_damage,int actor)
         {
             if (photonView.IsMine)

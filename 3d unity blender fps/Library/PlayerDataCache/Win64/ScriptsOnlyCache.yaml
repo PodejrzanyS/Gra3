@@ -29,7 +29,6 @@ ScriptsOnlyBuild:
     - Quit
     - RoomListItem
     - RoomManager
-    - Scoreboard
     - ShopTrigger
     - WaveSpawner
     - interactLookAtMe
@@ -63,8 +62,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -110,11 +111,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
-    - Class: 90
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
@@ -147,8 +150,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3538}
     - Class: 114
-      Script: {instanceID: 3594}
-    - Class: 114
       Script: {instanceID: 3946}
     - Class: 114
       Script: {instanceID: 5012}
@@ -165,13 +166,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6164}
     - Class: 114
+      Script: {instanceID: 6172}
+    - Class: 114
       Script: {instanceID: 7030}
     - Class: 114
       Script: {instanceID: 7372}
     - Class: 114
       Script: {instanceID: 7604}
     - Class: 114
-      Script: {instanceID: 46202}
+      Script: {instanceID: 35012}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -228,6 +231,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -359,8 +364,6 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -1010,7 +1013,7 @@ ScriptsOnlyBuild:
     className: OnClickInstantiate
   - hash:
       serializedVersion: 2
-      Hash: 0b3ac9eeeb519f17f757183873d6dc76
+      Hash: 59f1a13627bf063f7c08e68e16bd9c64
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Player

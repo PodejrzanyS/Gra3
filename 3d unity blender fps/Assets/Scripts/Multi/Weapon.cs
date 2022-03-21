@@ -37,6 +37,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public Text LevelUpText;
         public Text HealthAndDamage;
         private GameObject NEWLEVEL;
+        private bool isEquiping;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -108,11 +109,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 levelUp();
                 RefreshLevelBar();
 
-                if (level >= 1)
-                {
-                    
-                }
-
+         
 
             }
             if (Pause.paused && photonView.IsMine) return;
@@ -299,9 +296,17 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         IEnumerator Reload(float p_wait)
         {
+            if (isEquiping == true) { yield break; }
             isReloading = true;
-            currentWeapon.SetActive(false);
-
+            if (currentWeapon != null)
+            {
+                if (currentWeapon.GetComponent<Animator>())
+            {
+                currentWeapon.GetComponent<Animator>().Play("Reload", 0, 0);
+            }
+            else
+                currentWeapon.SetActive(false);
+            } 
             yield return new WaitForSeconds(p_wait);
 
             loadout[currentIndex].Reload();
@@ -309,24 +314,34 @@ namespace Com.Kawaiisun.SimpleHostile
             isReloading = false;
         }
         [PunRPC]
-        void Equip(int p_ind)
+        IEnumerator Equip(int p_ind)
         {
+            if (isEquiping == true || isReloading == true) { yield break; }
+            
             if (currentWeapon != null)
             {
                 //if(isReloading) StartCoroutine("Reload");
                 Destroy(currentWeapon);
             }
-
+            
+            isEquiping = true;   
             currentIndex = p_ind;
             GameObject t_newWeapon = Instantiate(loadout[p_ind].prefab, weaponParent.position, weaponParent.rotation, weaponParent) as GameObject;
             t_newWeapon.transform.localPosition = Vector3.zero;
             t_newWeapon.transform.localEulerAngles = Vector3.zero;
             t_newWeapon.GetComponent<Sway>().isMine = photonView.IsMine;
+          
+                t_newWeapon.GetComponent<Animator>().Play("Equip", 0, 0);
+            
+            yield return new WaitForSeconds(1);
+
             currentWeapon = t_newWeapon;
+            isEquiping = false;
         }
 
         void Aim(bool p_isAiming)
         {
+            if (isEquiping == true) { return; }
             isAming = p_isAiming;
             Transform t_anchor = currentWeapon.transform.Find("Anchor");
             Transform t_state_ads = currentWeapon.transform.Find("States/ADS");
@@ -344,6 +359,7 @@ namespace Com.Kawaiisun.SimpleHostile
         [PunRPC]
         void Shoot()
         {
+            if (isEquiping == true) { return; }
             Transform t_spawn = transform.Find("Cameras/Normal Camera");
 
             //bloom
@@ -368,8 +384,8 @@ namespace Com.Kawaiisun.SimpleHostile
                     if (t_hit.collider.gameObject.layer == 11)
                     {
 
-                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage + (lvl*4), PhotonNetwork.LocalPlayer.ActorNumber);
-                        currency =curr + Random.Range(0, 2);
+                        t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage + (lvl * 4), PhotonNetwork.LocalPlayer.ActorNumber);
+                        currency = curr + Random.Range(0, 2);
                         DoneDamage = loadout[currentIndex].damage + diddamage;
                         RefreshLevelBar();
                         Debug.Log(loadout[currentIndex].damage + (lvl * 4));
@@ -377,14 +393,19 @@ namespace Com.Kawaiisun.SimpleHostile
                         PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                         PlayerPrefs.Save();
 
+
                     }
                 }
             }
             currentCooldown = loadout[currentIndex].firerate;
 
             // gun fx
-            currentWeapon.transform.Rotate(-loadout[currentIndex].recoil, 0, 0);
-            currentWeapon.transform.position -= currentWeapon.transform.forward * loadout[currentIndex].kickback;
+            if (currentWeapon != null)
+            {
+                currentWeapon.transform.Rotate(-loadout[currentIndex].recoil, 0, 0);
+                currentWeapon.transform.position -= currentWeapon.transform.forward * loadout[currentIndex].kickback;
+            }
+
             //cooldown
 
         }
