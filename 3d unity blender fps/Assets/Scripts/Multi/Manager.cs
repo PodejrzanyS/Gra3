@@ -43,7 +43,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public string player_prefab;
         public Transform[] spawn_points;
 
-        public List<PlayerInfo> playerInfo = new List<PlayerInfo>();
+        public static List<PlayerInfo> playerInfo = new List<PlayerInfo>();
         public int myind;
 
         private TMP_Text ui_mykills;
@@ -57,7 +57,7 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         public void Update()
         {
-            
+
         }
         public void Spawn()
         {
@@ -69,8 +69,8 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             if (photonEvent.Code >= 200) return;
 
-            EventCodes e = (EventCodes) photonEvent.Code;
-            object[] o = (object[]) photonEvent.CustomData;
+            EventCodes e = (EventCodes)photonEvent.Code;
+            object[] o = (object[])photonEvent.CustomData;
 
             switch (e)
             {
@@ -116,13 +116,13 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             PlayerInfo p = new PlayerInfo(
                 new ProfileData(
-                    (string) data[0],
-                    (int) data[1],
-                    (int) data[2]
+                    (string)data[0],
+                    (int)data[1],
+                    (int)data[2]
                 ),
-                (int) data[3],
-                (short) data[4],
-                (short) data[5]
+                (int)data[3],
+                (short)data[4],
+                (short)data[5]
             );
 
             playerInfo.Add(p);
@@ -163,7 +163,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             for (int i = 0; i < data.Length; i++)
             {
-                object[] extract = (object[]) data[i];
+                object[] extract = (object[])data[i];
 
                 PlayerInfo p = new PlayerInfo(
                     new ProfileData(
@@ -178,11 +178,11 @@ namespace Com.Kawaiisun.SimpleHostile
 
 
                 playerInfo.Add(p);
-               
+
                 if (PhotonNetwork.LocalPlayer.ActorNumber == p.actor) myind = i;
             }
 
-            
+
 
         }
 
@@ -201,10 +201,12 @@ namespace Com.Kawaiisun.SimpleHostile
             int actor = (int)data[0];
             byte stat = (byte)data[1];
             byte amt = (byte)data[2];
-            Debug.Log(playerInfo.Count);
             for (int i = 0; i < playerInfo.Count; i++)
             {
                 Debug.Log("for");
+                Debug.Log(actor);
+                Debug.Log(stat);
+                Debug.Log(amt);
                 if (playerInfo[i].actor == actor)
                 {
                     switch (stat)
@@ -232,7 +234,7 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             ui_mykills = GameObject.Find("HUD/Stats/Kills/Text").GetComponent<TMP_Text>();
             ui_mydeaths = GameObject.Find("HUD/Stats/Deaths/Text").GetComponent<TMP_Text>();
-            
+
 
             RefreshMyStats();
 
@@ -252,6 +254,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_mydeaths.text = $"0 deaths";
             }
         }
-       
+
+        public static PlayerInfo[] GetAllPlayers ()
+        {
+            return playerInfo.ToArray();
+        }
     }
 }

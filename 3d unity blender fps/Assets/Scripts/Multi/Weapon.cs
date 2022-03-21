@@ -185,50 +185,95 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         public void levelUp()
         {
-            if (DoneDamage >= 500)
+            if (DoneDamage >= 500 && lvl == 0)
             {
                 
                 level = 1;
                 PlayerPrefs.SetInt("level", level);
-                expNeeded = 2500;
+                expNeeded = 1000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                 PlayerPrefs.Save();
                 StartCoroutine(MyIEnumerator());
                 
             }
-            if (DoneDamage >= 2500)
+            if (DoneDamage >= 1000 && lvl ==1)
             {
                 level = 2;
                 PlayerPrefs.SetInt("level", level);
-                expNeeded = 8000;
+                expNeeded = 1500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                 PlayerPrefs.Save();
             }
-            if (DoneDamage >= 8000)
+            if (DoneDamage >= 1500 && lvl == 2)
             {
                 level = 3;
                 PlayerPrefs.SetInt("level", level);
-                expNeeded = 20000;
+                expNeeded = 2000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                 PlayerPrefs.Save();
             }
-            if (DoneDamage >= 20000)
+            if (DoneDamage >= 2000 && lvl == 3)
             {
                 level = 4;
                 PlayerPrefs.SetInt("level", level);
-                expNeeded = 100000;
+                expNeeded = 2500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                 PlayerPrefs.Save();
             }
-            if (DoneDamage >= 100000)
+            if (DoneDamage >= 2500 && lvl == 4)
             {
                 level = 5;
                 PlayerPrefs.SetInt("level", level);
-                expNeeded = 1000000;
+                expNeeded = 2500;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 3000 && lvl == 5)
+            {
+                level = 6;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 3500;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 3500 && lvl == 6)
+            {
+                level = 7;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 4000;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 4000 && lvl == 7)
+            {
+                level = 8;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 4500;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 4500 && lvl == 8)
+            {
+                level = 9;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 5000;
+                DoneDamage = 0;
+                PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.Save();
+            }
+            if (DoneDamage >= 5000 && lvl == 9)
+            {
+                level = 10;
+                PlayerPrefs.SetInt("level", level);
+                expNeeded = 100000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                 PlayerPrefs.Save();

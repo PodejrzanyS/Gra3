@@ -510,6 +510,7 @@ MonoBehaviour:
   playerUsername: {fileID: 6762867499351959995}
   LookAtMe: {fileID: 0}
   lvl: 0
+  kills: 0
 --- !u!114 &3581931556582733813
 MonoBehaviour:
   m_ObjectHideFlags: 0

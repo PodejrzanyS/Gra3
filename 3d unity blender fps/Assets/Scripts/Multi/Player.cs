@@ -44,16 +44,20 @@ namespace Com.Kawaiisun.SimpleHostile
         public TextMeshPro playerUsername;
         public Transform LookAtMe;
         public int lvl;
+        public int kills;
+        public static GameObject scoreboard;
         #endregion
 
         #region Monobehaviour Callback
+
+
         private void Start()
         {
             
             velocity = rig.velocity;
             manager = GameObject.Find("Manager").GetComponent<Manager>();
             weapon = GetComponent<Weapon>();
-           
+
 
 
             cameraParent.SetActive(photonView.IsMine);
@@ -72,11 +76,14 @@ namespace Com.Kawaiisun.SimpleHostile
 
             if (photonView.IsMine)
             {
+
+             
+           
                 lvl = PlayerPrefs.GetInt("level");
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
                 ui_ammo = GameObject.Find("HUD/Ammo/Text").GetComponent<Text>();
                 ui_username = GameObject.Find("HUD/Username/Text").GetComponent<TMP_Text>();
-
+                
                 RefreshHealthBar();
 
                 ui_username.text = Launcher.myProfile.username;
@@ -94,6 +101,8 @@ namespace Com.Kawaiisun.SimpleHostile
         private void Update()
         {
             if (!photonView.IsMine) return;
+
+       
             lvl = PlayerPrefs.GetInt("level");
             float t_hmove = Input.GetAxis("Horizontal");
             float t_vmove = Input.GetAxis("Vertical");
@@ -160,11 +169,17 @@ namespace Com.Kawaiisun.SimpleHostile
                 movementCounter += Time.deltaTime * 7f;
                 weaponParent.localPosition = Vector3.Lerp(weaponParent.localPosition, targetWeaponBobPosition, Time.deltaTime * 10f);
             }
+            if (Input.GetKeyDown(KeyCode.Tab) && scoreboard == false)
+            {
+                scoreboard.SetActive(false);
+            } else if(Input.GetKeyDown(KeyCode.Tab) && scoreboard == true)
+            {
+                scoreboard.SetActive(false);
+            }
 
-         
-            //UI refreshes
+                //UI refreshes
 
-            RefreshHealthBar();
+                RefreshHealthBar();
 
             weapon.RefreshAmmo(ui_ammo);
 
@@ -278,7 +293,7 @@ namespace Com.Kawaiisun.SimpleHostile
         #region public methods
 
 
-        public void TakeDamage(int p_damage,int p_actor)
+        public void TakeDamage(int p_damage,int actor)
         {
             if (photonView.IsMine)
             {
@@ -286,18 +301,18 @@ namespace Com.Kawaiisun.SimpleHostile
                 RefreshHealthBar();
                 if (current_health <= 0)
                 {
+                    Debug.Log("Actor: "+actor);
                     manager.Spawn();
+                  
                     manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
-                    Debug.Log("dead"+Launcher.myProfile.username);
+                    Debug.Log("dead  "+Launcher.myProfile.username);
 
-                    if (p_actor >= 0)
-                        manager.ChangeStat_S(p_actor, 0, 1);
-
+                    if (actor >= 0) { manager.ChangeStat_S(actor, 0, 1); }
                     PhotonNetwork.Destroy(gameObject);
                 }
             }
         }
-
+       
         #endregion
 
 

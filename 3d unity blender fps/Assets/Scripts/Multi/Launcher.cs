@@ -14,7 +14,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public string username;
         public int level;
         public int xp;
-
+      
         public ProfileData()
         {
             this.username = "DEFAULT USERNAME";
@@ -42,7 +42,12 @@ namespace Com.Kawaiisun.SimpleHostile
         public TMP_InputField usernameField;
         public static ProfileData myProfile = new ProfileData();
 
-
+        public int curr;
+        public int lvl;
+        public int diddamage;
+        private TextMeshPro ui_level;
+        private TextMeshPro ui_DoneDamage;
+        private TextMeshPro ui_currency;
 
 
 
@@ -68,10 +73,11 @@ namespace Com.Kawaiisun.SimpleHostile
 
         void Start()
         {
+          
             Debug.Log("Connecting to Master");
             PhotonNetwork.ConnectUsingSettings();
-        }
 
+        }
         public override void OnConnectedToMaster()
         {
             Debug.Log("Connected to Master");

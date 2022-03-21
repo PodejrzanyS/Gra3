@@ -1405,7 +1405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &439426240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4469,7 +4469,7 @@ GameObject:
   - component: {fileID: 1620264468}
   - component: {fileID: 1620264467}
   m_Layer: 5
-  m_Name: XP
+  m_Name: ui_currency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4514,9 +4514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'XP 0/60
-
-'
+  m_text: 'Gold: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -4550,7 +4548,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5625,7 +5623,7 @@ GameObject:
   - component: {fileID: 1883708994}
   - component: {fileID: 1883708993}
   m_Layer: 5
-  m_Name: Level
+  m_Name: ui_level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5836,6 +5834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usernameField: {fileID: 1347867693}
+  curr: 0
+  lvl: 0
+  diddamage: 0
   roomNameInputField: {fileID: 1260142096}
   errorText: {fileID: 469581487}
   roomNameText: {fileID: 1862208173}
