@@ -44,11 +44,11 @@ namespace Com.Kawaiisun.SimpleHostile
 
         public int curr;
         public int lvl;
-        public int diddamage;
-        private TextMeshPro ui_level;
-        private TextMeshPro ui_DoneDamage;
-        private TextMeshPro ui_currency;
-
+        public int DoneDamage;
+        [SerializeField] TMP_Text ui_level;
+        [SerializeField] TMP_Text ui_DoneDamage;
+        [SerializeField] TMP_Text ui_currency;
+        public static bool Scope1;
 
 
 
@@ -73,10 +73,20 @@ namespace Com.Kawaiisun.SimpleHostile
 
         void Start()
         {
-          
+            Scope1 = false;
+            lvl = PlayerPrefs.GetInt("level");
+            curr = PlayerPrefs.GetInt("Currency");
+            DoneDamage = PlayerPrefs.GetInt("DoneDamage");
+            ui_currency.text = $"Gold: {curr}";
+            ui_level.text = $"LEVEL {lvl}";
             Debug.Log("Connecting to Master");
             PhotonNetwork.ConnectUsingSettings();
 
+        }
+        private void Update()
+        {
+            curr = PlayerPrefs.GetInt("Currency");
+            ui_currency.text = $"Gold: {curr}";
         }
         public override void OnConnectedToMaster()
         {
@@ -196,6 +206,29 @@ namespace Com.Kawaiisun.SimpleHostile
         public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
         {
             Instantiate(PlayerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+        }
+        public void BuyScope1()
+        {
+            if (curr >= 1 && lvl >= 0 && Scope1==false)
+            {
+                curr -= 1;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
+                Scope1 = true;
+                curr = PlayerPrefs.GetInt("Currency");
+            }
+        }
+        public void SellScope1()
+        {
+
+            if(Scope1==true)
+            {
+                curr += 1;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
+                Scope1 = false;
+                curr = PlayerPrefs.GetInt("Currency");
+            }
         }
     }
 }

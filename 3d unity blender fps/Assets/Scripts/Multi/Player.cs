@@ -48,6 +48,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public static GameObject scoreboard;
         public bool animating = false;
         private Animator anim;
+
         #endregion
 
         #region Monobehaviour Callback
@@ -141,7 +142,8 @@ namespace Com.Kawaiisun.SimpleHostile
             if (Input.GetKeyDown(KeyCode.U)) TakeDamage(100,-1);
             if(Input.GetKey(KeyCode.Space))
             {
-                GetComponent<Animator>().Play("Jump");
+               GetComponent<Animator>().Play("Jump");
+                
             }
             if (isJumping && rig.velocity.y <= 0)
             {
@@ -318,8 +320,12 @@ namespace Com.Kawaiisun.SimpleHostile
 
 
         #region public methods
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(1);
+        }
 
-       
+
         public void TakeDamage(int p_damage,int actor)
         {
             if (photonView.IsMine)
@@ -328,6 +334,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 RefreshHealthBar();
                 if (current_health <= 0)
                 {
+
                     Debug.Log("Actor: "+actor);
                     manager.Spawn();
                   

@@ -356,6 +356,7 @@
 "Assets/Scripts/NieMulti/Quit.cs"
 "Assets/Scripts/NieMulti/ShopTrigger.cs"
 "Assets/Scripts/NieMulti/WaveSpawner.cs"
+"Assets/weapons.cs"
 -langversion:8.0
 
 /deterministic

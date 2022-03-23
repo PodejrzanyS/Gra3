@@ -9,6 +9,7 @@ using Photon.Pun;
 using UnityEngine.UI;
 using TMPro;
 
+
 namespace Com.Kawaiisun.SimpleHostile
 {
     public class Weapon : MonoBehaviourPunCallbacks
@@ -38,6 +39,9 @@ namespace Com.Kawaiisun.SimpleHostile
         public Text HealthAndDamage;
         private GameObject NEWLEVEL;
         private bool isEquiping;
+        public int exp;
+        public static bool bloonhit;
+        public static GameObject whathit;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -52,11 +56,12 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         private void Start()
         {
-            lvl = PlayerPrefs.GetInt("level");
-            curr = PlayerPrefs.GetInt("Currency");
-            diddamage = PlayerPrefs.GetInt("DoneDamage");
+           
             if (photonView.IsMine)
             {
+                lvl = PlayerPrefs.GetInt("level");
+                curr = PlayerPrefs.GetInt("Currency");
+                diddamage = PlayerPrefs.GetInt("DoneDamage");
                 ui_levelbar = GameObject.Find("HUD/Health/levelbar").GetComponent<Slider>();
                 ui_level = GameObject.Find("HUD/Username/level").GetComponent<Text>();
                 ui_DoneDamage = GameObject.Find("HUD/Stats/DMG").GetComponent<Text>();
@@ -69,33 +74,40 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_currency.text = $"Gold: {curr}";
                 NEWLEVEL = GameObject.Find("NEWLEVEL");
                 ui_level.text = $"LEVEL {lvl}";
+                bloonhit = false;
+                if (lvl == 0)
+                {
+                    level = 0;
+                    expNeeded = 500;
+                    PlayerPrefs.SetInt("expNeeded", expNeeded);
+                    PlayerPrefs.Save();
+                }
+                else
+                {
+                    level = lvl;
+                    DoneDamage = PlayerPrefs.GetInt("DoneDamage");
+                    expNeeded = PlayerPrefs.GetInt("expNeeded");
+                    PlayerPrefs.Save();
+                }
             }
             
             foreach (Gun a in loadout) a.Initialize();
             Equip(0);
-            if (lvl == 0)
-            {
-                level = 0;
-                expNeeded = 500;
-            }
-            else
-            {
-                level = lvl;
-                
-            }
+          
             
         }
 
         // Update is called once per frame
         void Update()
         {
-            lvl = PlayerPrefs.GetInt("level");
-            curr = PlayerPrefs.GetInt("Currency");
-            diddamage = PlayerPrefs.GetInt("DoneDamage");
+
 
 
             if (photonView.IsMine)
             {
+                lvl = PlayerPrefs.GetInt("level");
+                curr = PlayerPrefs.GetInt("Currency");
+                diddamage = PlayerPrefs.GetInt("DoneDamage");
                 NEWLEVEL = GameObject.Find("NEWLEVEL");
                 LevelUpText = GameObject.Find("HUD/LevelUpText").GetComponent<Text>();
                 HealthAndDamage = GameObject.Find("HUD/Damage+Health").GetComponent<Text>();
@@ -107,9 +119,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_currency.text = $"Gold: {curr}";
                 ui_level.text = $"LEVEL {lvl}";
                 levelUp();
-                RefreshLevelBar();
-
-         
+                RefreshLevelBar();      
 
             }
             if (Pause.paused && photonView.IsMine) return;
@@ -190,9 +200,11 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 1000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
                 StartCoroutine(MyIEnumerator());
-                
+        
+
             }
             if (DoneDamage >= 1000 && lvl ==1)
             {
@@ -201,7 +213,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 1500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+  
             }
             if (DoneDamage >= 1500 && lvl == 2)
             {
@@ -210,7 +225,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 2000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+   
             }
             if (DoneDamage >= 2000 && lvl == 3)
             {
@@ -219,7 +237,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 2500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
             if (DoneDamage >= 2500 && lvl == 4)
             {
@@ -228,7 +249,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 2500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
             if (DoneDamage >= 3000 && lvl == 5)
             {
@@ -237,7 +261,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 3500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
             if (DoneDamage >= 3500 && lvl == 6)
             {
@@ -246,7 +273,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 4000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
             if (DoneDamage >= 4000 && lvl == 7)
             {
@@ -255,7 +285,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 4500;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
             if (DoneDamage >= 4500 && lvl == 8)
             {
@@ -264,7 +297,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 5000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
             if (DoneDamage >= 5000 && lvl == 9)
             {
@@ -273,7 +309,10 @@ namespace Com.Kawaiisun.SimpleHostile
                 expNeeded = 100000;
                 DoneDamage = 0;
                 PlayerPrefs.SetInt("DoneDamage", DoneDamage);
+                PlayerPrefs.SetInt("expNeeded", expNeeded);
                 PlayerPrefs.Save();
+                StartCoroutine(MyIEnumerator());
+
             }
         }
         public void RefreshAmmo(Text p_text)
@@ -291,8 +330,10 @@ namespace Com.Kawaiisun.SimpleHostile
 
         void RefreshLevelBar()
         {
+          
             float t_level_ratio = (float)DoneDamage / (float)expNeeded;
-            ui_levelbar.value = t_level_ratio; 
+            ui_levelbar.value = t_level_ratio;
+
         }
         IEnumerator Reload(float p_wait)
         {
@@ -338,8 +379,12 @@ namespace Com.Kawaiisun.SimpleHostile
             currentWeapon = t_newWeapon;
             isEquiping = false;
         }
-
-        void Aim(bool p_isAiming)
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(3);
+            bloonhit = false;
+        }
+            void Aim(bool p_isAiming)
         {
             if (isEquiping == true) { return; }
             isAming = p_isAiming;
@@ -388,14 +433,25 @@ namespace Com.Kawaiisun.SimpleHostile
                         currency = curr + Random.Range(0, 2);
                         DoneDamage = loadout[currentIndex].damage + diddamage;
                         RefreshLevelBar();
-                        Debug.Log(loadout[currentIndex].damage + (lvl * 4));
+
                         PlayerPrefs.SetInt("Currency", currency);
                         PlayerPrefs.SetInt("DoneDamage", DoneDamage);
                         PlayerPrefs.Save();
 
 
                     }
+                    if (t_hit.collider.gameObject.layer == 12 && bloonhit == false)
+                    {
+                        bloonhit = true;
+                        whathit = t_hit.collider.gameObject;
+                        StartCoroutine(Wait());
+
+                        
+                        Debug.Log(bloonhit);
+
+                    }
                 }
+               
             }
             currentCooldown = loadout[currentIndex].firerate;
 

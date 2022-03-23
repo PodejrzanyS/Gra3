@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - Com.Kawaiisun.SimpleHostile.PlayerNameManager
     - Com.Kawaiisun.SimpleHostile.Sway
     - Com.Kawaiisun.SimpleHostile.Weapon
+    - Com.Kawaiisun.SimpleHostile.weapons
     - Enemy
     - Health
     - HealthBar
@@ -43,6 +44,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -130,13 +133,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1512}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1760}
+      Script: {instanceID: 2294}
     - Class: 114
       Script: {instanceID: 2594}
     - Class: 114
@@ -174,7 +177,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7604}
     - Class: 114
-      Script: {instanceID: 35012}
+      Script: {instanceID: 34328}
+    - Class: 114
+      Script: {instanceID: 291128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -232,8 +237,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -247,17 +250,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1512}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 1608}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1760}
+      Script: {instanceID: 2148}
     - Class: 114
-      Script: {instanceID: 2150}
+      Script: {instanceID: 2294}
     - Class: 114
       Script: {instanceID: 2594}
     - Class: 114
@@ -314,6 +317,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7730}
     - Class: 114
       Script: {instanceID: 8016}
+    - Class: 114
+      Script: {instanceID: 291128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -365,6 +370,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -374,15 +381,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1624}
+      Script: {instanceID: 1622}
     - Class: 114
-      Script: {instanceID: 1694}
+      Script: {instanceID: 1692}
     - Class: 114
-      Script: {instanceID: 2060}
+      Script: {instanceID: 2058}
     - Class: 114
       Script: {instanceID: 2336}
     - Class: 114
@@ -481,11 +488,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1512}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1760}
+      Script: {instanceID: 2294}
     - Class: 114
       Script: {instanceID: 2316}
     - Class: 114
@@ -557,22 +564,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: c1d728126ff1918728036c59106d32b2
+      Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: RawImage
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
@@ -803,6 +804,12 @@ ScriptsOnlyBuild:
     className: ChatAppIdCheckerUI
   - hash:
       serializedVersion: 2
+      Hash: c1d728126ff1918728036c59106d32b2
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -929,7 +936,7 @@ ScriptsOnlyBuild:
     className: RoomListItem
   - hash:
       serializedVersion: 2
-      Hash: 6a0f3fdf9586aa8a732a900d65b0995b
+      Hash: dbfebf2d6c29e488f4b2b7f523cffb94
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Weapon
@@ -1667,7 +1674,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 7626eed8d767b3a1f539bb750d8987e2
+      Hash: 45f9de1728c3bf0bf69910b76be65ccf
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Launcher
@@ -2487,10 +2494,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Com.Kawaiisun.SimpleHostile
+    className: weapons
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Multi.unity
   - Assets/Scenes/Game.unity
-  playerPath: F:/gra multi test/3d unity blender fps.exe
+  playerPath: D:/gra multi test/3d unity blender fps.exe
