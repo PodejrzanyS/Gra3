@@ -1,27 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 namespace Com.Kawaiisun.SimpleHostile
 {
-    public class weapons : MonoBehaviour
+    public class weapons : MonoBehaviourPunCallbacks
     {
         public static GameObject celownik1;
 
         void Start()
         {
-            celownik1 = GameObject.Find("Celownik1");
-            celownik1.SetActive(false);
+            if (photonView.IsMine)
+            {
+                celownik1 = GameObject.Find("Celownik1");
+                celownik1.SetActive(false);
+            }
         }
 
         void Update()
         {
-            if (Launcher.Scope1.Equals(true))
+            if (photonView.IsMine)
             {
-                celownik1.SetActive(true);
-            }
-            else
-            {
-                celownik1.SetActive(false);
+                if (Launcher.Scope1.Equals(true))
+                {
+                    celownik1.SetActive(true);
+                }
+                else
+                {
+                    celownik1.SetActive(false);
+                }
             }
     }
     }
