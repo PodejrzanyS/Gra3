@@ -430,7 +430,7 @@ namespace Com.Kawaiisun.SimpleHostile
                     {
 
                         t_hit.collider.transform.root.gameObject.GetPhotonView().RPC("TakeDamage", RpcTarget.All, loadout[currentIndex].damage + (lvl * 4), PhotonNetwork.LocalPlayer.ActorNumber);
-                        currency = curr + Random.Range(0, 2);
+                        currency = curr + Random.Range(0, 5);
                         DoneDamage = loadout[currentIndex].damage + diddamage;
                         RefreshLevelBar();
 

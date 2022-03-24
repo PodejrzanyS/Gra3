@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +53,9 @@
     <UnityVersion>2021.1.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Multi\Sway.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\Multi\Menu.cs" />
@@ -81,10 +84,12 @@
     <Compile Include="Assets\Scripts\NieMulti\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\Multi\Scoreboard.cs" />
     <Compile Include="Assets\Scripts\Multi\Pause.cs" />
+    <Compile Include="Assets\bloon.cs" />
     <Compile Include="Assets\ASSETY BUDOWA\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Misc\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\NieMulti\HealthDrzewo.cs" />
     <Compile Include="Assets\Scripts\NieMulti\Bulletspawn.cs" />
     <Compile Include="Assets\Scripts\NieMulti\noShootingWhileReloading.cs" />
+    <Compile Include="Assets\weapons.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\Multi\PlayerNameManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -114,8 +119,6 @@
     <Compile Include="Assets\ASSETY BUDOWA\Low Poly FPS Pack - Free (Sample)\Components\Scripts\Weapon_Scripts\HandgunScriptLPFP.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-    <Compile Include="Assets\weapons.cs" />
-    <Compile Include="Assets\bloon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
