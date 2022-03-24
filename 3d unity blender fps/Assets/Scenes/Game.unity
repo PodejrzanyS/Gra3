@@ -266,7 +266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 10011679}
 --- !u!135 &10011682
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -829,7 +828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 21799093}
 --- !u!135 &21799096
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17179,7 +17177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 279148378}
 --- !u!135 &279148381
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18649,7 +18646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 355793273}
 --- !u!135 &355793276
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38151,7 +38147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 737085293}
 --- !u!135 &737085296
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38641,7 +38636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 755173063}
 --- !u!135 &755173066
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -41027,7 +41021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 858806871}
 --- !u!135 &858806874
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -46625,7 +46618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 1071529351}
 --- !u!135 &1071529354
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -48590,7 +48582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 1135422461}
 --- !u!135 &1135422464
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -52493,7 +52484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 1289354596}
 --- !u!135 &1289354599
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -56003,7 +55993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 1430074108}
 --- !u!135 &1430074111
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -64074,7 +64063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6c874d87aac0b46b6b4d92a61642f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balon: {fileID: 1724310350}
 --- !u!135 &1724310353
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -74689,6 +74677,15 @@ MonoBehaviour:
   player_prefab: Player
   spawn_points:
   - {fileID: 1176064732}
+  - {fileID: 1481622081}
+  - {fileID: 2060034079}
+  - {fileID: 2030849996}
+  - {fileID: 154606190}
+  - {fileID: 1648467834}
+  - {fileID: 2107244941}
+  - {fileID: 1317273301}
+  - {fileID: 2061320800}
+  - {fileID: 1008712649}
   myind: 0
 --- !u!1 &1077918034474660
 GameObject:

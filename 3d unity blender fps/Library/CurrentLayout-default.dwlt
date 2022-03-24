@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 109
+  controlID: 116
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 110
+  controlID: 117
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,22 +341,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Resources
+  - Assets/Scenes
   m_LastFoldersGridSize: 60
-  m_LastProjectPath: C:\Users\Admin\Desktop\kox gra\3d unity blender fps
+  m_LastProjectPath: C:\Users\Kamil\Documents\GitHub\Gra3\3d unity blender fps
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 18580000
-    m_LastClickedID: 22552
-    m_ExpandedIDs: 0000000016580000125900001a59000000ca9a3b
+    scrollPos: {x: 0, y: 158}
+    m_SelectedIDs: 68650000
+    m_LastClickedID: 25960
+    m_ExpandedIDs: 000000003e65000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -384,7 +384,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 63}
     m_SelectedIDs: b0560000
     m_LastClickedID: 22192
-    m_ExpandedIDs: 000000001658000018580000
+    m_ExpandedIDs: 000000003e650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -468,9 +468,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 787dffffb87dffff6086ffff6486ffff8a88ffff9088ffffbc89fffffa89fffff894fffffc94ffff4497ffff4c97ffff2af3ffff56f7ffff34faffff66faffff4efbffff50560000b05900002c5a0000845a0000705b00009c5b0000
+      m_SelectedIDs: 46810000
+      m_LastClickedID: 33094
+      m_ExpandedIDs: 96f5ffffbcf6ffffb86d000046810000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -585,11 +585,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1115
-      height: 634
+      height: 655
     m_Scale: {x: 0.5807292, y: 0.5807292}
-    m_Translation: {x: 557.49994, y: 317.00003}
+    m_Translation: {x: 557.49994, y: 327.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -597,9 +597,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -959.9999
-      y: -545.8655
+      y: -563.94617
       width: 1919.9999
-      height: 1091.731
+      height: 1127.8923
     m_MinimalGUI: 1
   m_defaultScale: 0.5807292
   m_LastWindowPixelSize: {x: 1115, y: 655}
@@ -858,9 +858,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 933.39484, y: 659.02924, z: -386.81815}
+    m_Target: {x: 501.14133, y: 452.87582, z: -506.35843}
     speed: 2
-    m_Value: {x: 933.39484, y: 659.02924, z: -386.81815}
+    m_Value: {x: 505.289, y: 432.78552, z: -502.2626}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -911,9 +911,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 703.7345
+    m_Target: 951.14276
     speed: 2
-    m_Value: 703.7345
+    m_Value: 910.18445
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -931,7 +931,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.13133872, y: 0.58483833, z: -0.09666842, w: 0.79459316}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
