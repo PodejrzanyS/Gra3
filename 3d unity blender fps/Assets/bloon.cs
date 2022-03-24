@@ -18,17 +18,7 @@ namespace Com.Kawaiisun.SimpleHostile
         void Update()
         {
             
-            if (Weapon.bloonhit.Equals(true))
-            {
-                balon = Weapon.whathit;
-                balon.SetActive(false);
-              
-            }
-            else
-            {
-                balon.SetActive(true);
-                
-            }
+           
 
         } 
     }

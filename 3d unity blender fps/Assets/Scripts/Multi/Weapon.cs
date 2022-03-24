@@ -42,6 +42,7 @@ namespace Com.Kawaiisun.SimpleHostile
         public int exp;
         public static bool bloonhit;
         public static GameObject whathit;
+        public GameObject bloon;
         #endregion
         #region MonoHehaviour Callbacks
 
@@ -382,7 +383,7 @@ namespace Com.Kawaiisun.SimpleHostile
         IEnumerator Wait()
         {
             yield return new WaitForSeconds(3);
-            bloonhit = false;
+            Instantiate(bloon, new Vector3(Random.Range(42,56), Random.Range(-1, 9), 11), Quaternion.identity);
         }
             void Aim(bool p_isAiming)
         {
@@ -442,8 +443,9 @@ namespace Com.Kawaiisun.SimpleHostile
                     }
                     if (t_hit.collider.gameObject.layer == 12 && bloonhit == false)
                     {
-                        bloonhit = true;
+
                         whathit = t_hit.collider.gameObject;
+                        Destroy(whathit);
                         StartCoroutine(Wait());
 
                         
