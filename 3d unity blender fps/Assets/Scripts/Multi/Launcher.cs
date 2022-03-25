@@ -212,9 +212,9 @@ namespace Com.Kawaiisun.SimpleHostile
         public void BuyScope1()
         {
            
-                if (curr >= 0 && lvl >= 0 && Scope1 == false)
+                if (curr >= 300 && lvl >= 4 && Scope1 == false)
                 {
-                    curr -= 0;
+                    curr -= 300;
                     PlayerPrefs.SetInt("Currency", curr);
                     PlayerPrefs.Save();
                 Scope1 = true;
@@ -228,7 +228,7 @@ namespace Com.Kawaiisun.SimpleHostile
            
                 if (Scope1 == true)
                 {
-                    curr += 0;
+                    curr += 100;
                     PlayerPrefs.SetInt("Currency", curr);
                     PlayerPrefs.Save();
                 Scope1 = false;
