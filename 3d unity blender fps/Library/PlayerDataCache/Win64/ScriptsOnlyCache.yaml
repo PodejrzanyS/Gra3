@@ -180,7 +180,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7612}
     - Class: 114
-      Script: {instanceID: 33262}
+      Script: {instanceID: 34624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,6 +240,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -280,6 +282,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3836}
     - Class: 114
       Script: {instanceID: 3838}
+    - Class: 114
+      Script: {instanceID: 3958}
     - Class: 114
       Script: {instanceID: 4002}
     - Class: 114
@@ -372,8 +376,6 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -941,7 +943,7 @@ ScriptsOnlyBuild:
     className: RoomListItem
   - hash:
       serializedVersion: 2
-      Hash: dbfebf2d6c29e488f4b2b7f523cffb94
+      Hash: 95da1d6002481049868623ecd541a92b
     assemblyName: Assembly-CSharp.dll
     namespaceName: Com.Kawaiisun.SimpleHostile
     className: Weapon
@@ -2517,4 +2519,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Multi.unity
   - Assets/Scenes/Game.unity
-  playerPath: F:/gra multi test/3d unity blender fps.exe
+  playerPath: D:/gra multi test/3d unity blender fps.exe

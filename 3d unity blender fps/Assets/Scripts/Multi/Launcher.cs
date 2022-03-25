@@ -73,7 +73,9 @@ namespace Com.Kawaiisun.SimpleHostile
 
         void Start()
         {
-            Scope1 = false;
+            
+                Scope1 = false;
+           
             lvl = PlayerPrefs.GetInt("level");
             curr = PlayerPrefs.GetInt("Currency");
             DoneDamage = PlayerPrefs.GetInt("DoneDamage");
@@ -209,26 +211,31 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         public void BuyScope1()
         {
-            if (curr >= 50 && lvl >= 2 && Scope1==false)
-            {
-                curr -= 50;
-                PlayerPrefs.SetInt("Currency", curr);
-                PlayerPrefs.Save();
+           
+                if (curr >= 0 && lvl >= 0 && Scope1 == false)
+                {
+                    curr -= 0;
+                    PlayerPrefs.SetInt("Currency", curr);
+                    PlayerPrefs.Save();
                 Scope1 = true;
+                PlayerPrefs.SetInt("Scope1", Scope1 ? 1 : 0);
                 curr = PlayerPrefs.GetInt("Currency");
-            }
+                }
+            
         }
         public void SellScope1()
         {
-
-            if(Scope1==true)
-            {
-                curr += 50;
-                PlayerPrefs.SetInt("Currency", curr);
-                PlayerPrefs.Save();
+           
+                if (Scope1 == true)
+                {
+                    curr += 0;
+                    PlayerPrefs.SetInt("Currency", curr);
+                    PlayerPrefs.Save();
                 Scope1 = false;
-                curr = PlayerPrefs.GetInt("Currency");
-            }
+                PlayerPrefs.SetInt("Scope1",Scope1 ? 1:0);
+                    curr = PlayerPrefs.GetInt("Currency");
+                }
+            
         }
     }
 }

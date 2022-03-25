@@ -54,10 +54,11 @@ namespace Com.Kawaiisun.SimpleHostile
         #region Monobehaviour Callback
 
 
+        
         private void Start()
         {
-            
-            velocity = rig.velocity;
+          
+                velocity = rig.velocity;
             manager = GameObject.Find("Manager").GetComponent<Manager>();
             weapon = GetComponent<Weapon>();
 
@@ -68,6 +69,7 @@ namespace Com.Kawaiisun.SimpleHostile
             if (!photonView.IsMine)
             {
                 gameObject.layer = 11;
+              
             }
 
             baseFOV = normalCam.fieldOfView;
@@ -79,8 +81,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             if (photonView.IsMine)
             {
-
-
+                
                 anim = GetComponent<Animator>();
                 lvl = PlayerPrefs.GetInt("level");
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
@@ -103,6 +104,7 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         private void Update()
         {
+           
             if (!photonView.IsMine) return;
 
        

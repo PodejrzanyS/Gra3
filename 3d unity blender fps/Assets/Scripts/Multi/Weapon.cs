@@ -55,9 +55,12 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             PhotonNetwork.RemoveCallbackTarget(this);
         }
+       
         private void Start()
         {
-           
+            
+
+          
             if (photonView.IsMine)
             {
                 lvl = PlayerPrefs.GetInt("level");
@@ -90,18 +93,18 @@ namespace Com.Kawaiisun.SimpleHostile
                     expNeeded = PlayerPrefs.GetInt("expNeeded");
                     PlayerPrefs.Save();
                 }
+                foreach (Gun a in loadout) a.Initialize();
+                Equip(0);
             }
+
             
-            foreach (Gun a in loadout) a.Initialize();
-            Equip(0);
-          
-            
+
+
         }
 
         // Update is called once per frame
         void Update()
         {
-
 
 
             if (photonView.IsMine)
@@ -358,6 +361,7 @@ namespace Com.Kawaiisun.SimpleHostile
         [PunRPC]
         IEnumerator Equip(int p_ind)
         {
+          
             if (isEquiping == true || isReloading == true) { yield break; }
             
             if (currentWeapon != null)
@@ -371,9 +375,12 @@ namespace Com.Kawaiisun.SimpleHostile
             GameObject t_newWeapon = Instantiate(loadout[p_ind].prefab, weaponParent.position, weaponParent.rotation, weaponParent) as GameObject;
             t_newWeapon.transform.localPosition = Vector3.zero;
             t_newWeapon.transform.localEulerAngles = Vector3.zero;
+           
             t_newWeapon.GetComponent<Sway>().isMine = photonView.IsMine;
-          
-                t_newWeapon.GetComponent<Animator>().Play("Equip", 0, 0);
+
+            t_newWeapon.GetComponent<Animator>().keepAnimatorControllerStateOnDisable = true;
+            t_newWeapon.GetComponent<Animator>().Play("Equip", 0, 0);
+
             
             yield return new WaitForSeconds(1);
 
