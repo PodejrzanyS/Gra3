@@ -49,7 +49,8 @@ namespace Com.Kawaiisun.SimpleHostile
         [SerializeField] TMP_Text ui_DoneDamage;
         [SerializeField] TMP_Text ui_currency;
         public static bool Scope1;
-
+        public static bool Silancer1;
+        public static bool Magazynek1;
 
 
 
@@ -225,17 +226,69 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         public void SellScope1()
         {
-           
-                if (Scope1 == true)
-                {
-                    curr += 100;
-                    PlayerPrefs.SetInt("Currency", curr);
-                    PlayerPrefs.Save();
+
+            if (Scope1 == true)
+            {
+                curr += 100;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
                 Scope1 = false;
-                PlayerPrefs.SetInt("Scope1",Scope1 ? 1:0);
-                    curr = PlayerPrefs.GetInt("Currency");
-                }
-            
+                PlayerPrefs.SetInt("Scope1", Scope1 ? 1 : 0);
+                curr = PlayerPrefs.GetInt("Currency");
+            }
+
+        }
+        public void BuySilancer1()
+        {
+            if (curr >= 500 && lvl >= 5 && Silancer1 == false)
+            {
+                curr -= 200;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
+                Silancer1 = true;
+                PlayerPrefs.SetInt("Scope1", Silancer1 ? 1 : 0);
+                curr = PlayerPrefs.GetInt("Currency");
+            }
+        }
+        public void SellSilancer1()
+        {
+
+            if (Silancer1 == true)
+            {
+                curr += 50;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
+                Silancer1 = false;
+                PlayerPrefs.SetInt("Scope1", Silancer1 ? 1 : 0);
+                curr = PlayerPrefs.GetInt("Currency");
+            }
+
+        }
+        public void BuyMagazynek1()
+        {
+            if (curr >= 600 && lvl >= 7 && Magazynek1 == false)
+            {
+                curr -= 600;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
+                Magazynek1 = true;
+                PlayerPrefs.SetInt("Scope1", Magazynek1 ? 1 : 0);
+                curr = PlayerPrefs.GetInt("Currency");
+            }
+        }
+        public void SelllMagazynek()
+        {
+
+            if (Magazynek1 == true)
+            {
+                curr += 50;
+                PlayerPrefs.SetInt("Currency", curr);
+                PlayerPrefs.Save();
+                Magazynek1 = false;
+                PlayerPrefs.SetInt("Scope1", Magazynek1 ? 1 : 0);
+                curr = PlayerPrefs.GetInt("Currency");
+            }
+
         }
     }
 }
