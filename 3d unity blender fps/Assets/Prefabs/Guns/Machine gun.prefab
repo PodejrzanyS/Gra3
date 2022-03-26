@@ -990,6 +990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Default Arms
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4fa9a582320f9fd42b5e90b8b0c13596, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -444521105353760620, guid: 4fa9a582320f9fd42b5e90b8b0c13596, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

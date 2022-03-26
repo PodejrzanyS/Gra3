@@ -28,7 +28,7 @@ namespace Com.Kawaiisun.SimpleHostile
     }
 
 
-    public class Manager : MonoBehaviour, IOnEventCallback
+    public class Manager : MonoBehaviourPunCallbacks, IOnEventCallback
     {
 
         public int currency;
@@ -48,6 +48,17 @@ namespace Com.Kawaiisun.SimpleHostile
 
         private TMP_Text ui_mykills;
         private TMP_Text ui_mydeaths;
+        private Transform ui_leaderboard;
+        private void OnEnable()
+        {
+            PhotonNetwork.AddCallbackTarget(this);
+        }
+
+        private void OnDisable()
+        {
+            PhotonNetwork.RemoveCallbackTarget(this);
+        }
+
         private void Start()
         {
             ValidateConnection();
@@ -55,10 +66,19 @@ namespace Com.Kawaiisun.SimpleHostile
             NewPlayer_S(Launcher.myProfile);
             Spawn();
         }
-        public void Update()
+        private void Update()
         {
+            
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    if (ui_leaderboard != null)
+                    {
+                        if (ui_leaderboard.gameObject.activeSelf) ui_leaderboard.gameObject.SetActive(false);
+                        else Leaderboard(ui_leaderboard);
+                    }
+                }
 
-        }
+                  }
         public void Spawn()
         {
             Transform t_spawn = spawn_points[Random.Range(0, spawn_points.Length)];
@@ -146,8 +166,7 @@ namespace Com.Kawaiisun.SimpleHostile
                 piece[4] = info[i].kills;
                 piece[5] = info[i].deaths;
 
-                Debug.Log(piece[4]);
-                Debug.Log(piece[5]);
+
 
                 package[i] = piece;
             }
@@ -225,6 +244,7 @@ namespace Com.Kawaiisun.SimpleHostile
                     }
 
                     if (i == myind) RefreshMyStats();
+                    if (ui_leaderboard.gameObject.activeSelf) Leaderboard(ui_leaderboard);
                     return;
                 }
             }
@@ -234,7 +254,7 @@ namespace Com.Kawaiisun.SimpleHostile
         {
             ui_mykills = GameObject.Find("HUD/Stats/Kills/Text").GetComponent<TMP_Text>();
             ui_mydeaths = GameObject.Find("HUD/Stats/Deaths/Text").GetComponent<TMP_Text>();
-
+            ui_leaderboard = GameObject.Find("HUD").transform.Find("Leaderboard").transform;
 
             RefreshMyStats();
 
@@ -253,11 +273,95 @@ namespace Com.Kawaiisun.SimpleHostile
                 ui_mykills.text = $"0 kills";
                 ui_mydeaths.text = $"0 deaths";
             }
+            if (ui_leaderboard.gameObject.activeSelf) Leaderboard(ui_leaderboard);
         }
 
-        public static PlayerInfo[] GetAllPlayers ()
+        public static PlayerInfo[] GetAllPlayers()
         {
             return playerInfo.ToArray();
         }
+
+
+
+
+        private void Leaderboard(Transform p_lb)
+        {
+
+            // clean up
+            for (int i = 2; i < p_lb.childCount; i++)
+            {
+                Destroy(p_lb.GetChild(i).gameObject);
+            }
+
+            // set details
+            
+
+
+
+            // cache prefab
+            GameObject playercard = p_lb.GetChild(1).gameObject;
+            playercard.SetActive(false);
+
+            // sort
+            List<PlayerInfo> sorted = SortPlayers(playerInfo);
+
+            // display
+            bool t_alternateColors = false;
+            foreach (PlayerInfo a in sorted)
+            {
+                GameObject newcard = Instantiate(playercard, p_lb) as GameObject;
+
+                if (t_alternateColors) newcard.GetComponent<Image>().color = new Color32(0, 0, 0, 180);
+                t_alternateColors = !t_alternateColors;
+              
+                newcard.transform.Find("Level").GetComponent<Text>().text = $"LEVEL {a.profile.level}";
+                newcard.transform.Find("Username").GetComponent<Text>().text = $"Nickname: {a.profile.username}";
+                newcard.transform.Find("Deaths").GetComponent<Text>().text = $"Deaths: {a.deaths}";
+
+                newcard.SetActive(true);
+            }
+
+            // activate
+            p_lb.gameObject.SetActive(true);
+        }
+
+        private List<PlayerInfo> SortPlayers (List<PlayerInfo> p_info)
+        {
+            List<PlayerInfo> sorted = new List<PlayerInfo>();
+
+
+            while (sorted.Count < p_info.Count)
+            {
+                // set defaults
+                short highest = -1;
+                PlayerInfo selection = p_info[0];
+
+                // grab next highest player
+                foreach (PlayerInfo a in p_info)
+                {
+                    if (sorted.Contains(a)) continue;
+                    if (a.deaths > highest)
+                    {
+                        selection = a;
+                        highest = a.deaths;
+                    }
+                }
+
+
+                // add player
+                sorted.Add(selection);
+            }
+            return sorted;
+        }
+
+         
+            
+        
+
+
+
+
+
+
     }
 }

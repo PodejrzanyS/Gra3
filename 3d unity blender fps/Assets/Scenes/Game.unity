@@ -46257,58 +46257,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1842585811}
     m_Modifications:
-    - target: {fileID: 3259884, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 264.4633
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259884, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 78.584
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259884, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -106.8317
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259884, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 10.708
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259885, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259885, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259885, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259885, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259885, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3259885, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1994935255, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 454
-      objectReference: {fileID: 0}
-    - target: {fileID: 1994935256, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_margin.w
-      value: 0.5767822
-      objectReference: {fileID: 0}
-    - target: {fileID: 1994935256, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_margin.y
-      value: 0.099609375
-      objectReference: {fileID: 0}
     - target: {fileID: 2500006055746656737, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -46404,14 +46352,6 @@ PrefabInstance:
     - target: {fileID: 4807200549021198723, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4807200550365694245, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 43.9576
-      objectReference: {fileID: 0}
-    - target: {fileID: 4807200550365694245, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 981.22546
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
@@ -50835,26 +50775,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d7345a77f785f4041aa505b0645df651, type: 3}
---- !u!1 &1240167341 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3259883, guid: 30e6f10de439604488f373d4d9e21233, type: 3}
-  m_PrefabInstance: {fileID: 1072642474}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1240167343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240167341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 8, y: -8}
-  m_UseGraphicAlpha: 1
 --- !u!1 &1244302992
 GameObject:
   m_ObjectHideFlags: 0

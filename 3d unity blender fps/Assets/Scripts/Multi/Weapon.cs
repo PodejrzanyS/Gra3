@@ -454,8 +454,8 @@ namespace Com.Kawaiisun.SimpleHostile
                         whathit = t_hit.collider.gameObject;
                         Destroy(whathit);
                         StartCoroutine(Wait());
+                        currency = curr + Random.Range(0, 1);
 
-                        
                         Debug.Log(bloonhit);
 
                     }

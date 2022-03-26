@@ -45,16 +45,16 @@ namespace Com.Kawaiisun.SimpleHostile
         public Transform LookAtMe;
         public int lvl;
         public int kills;
-        public static GameObject scoreboard;
+       // public static GameObject scoreboard;
         public bool animating = false;
         private Animator anim;
-
+      //  public static TMP_Text scoreboardt;
         #endregion
 
         #region Monobehaviour Callback
 
 
-        
+
         private void Start()
         {
           
@@ -81,7 +81,10 @@ namespace Com.Kawaiisun.SimpleHostile
 
             if (photonView.IsMine)
             {
-                
+              //  scoreboard = GameObject.Find("HUD/scoreboard");
+                //scoreboardt = GameObject.Find("HUD/scoreboard/scoreboardt").GetComponent<TMP_Text>();
+                //scoreboard.SetActive(false);
+               
                 anim = GetComponent<Animator>();
                 lvl = PlayerPrefs.GetInt("level");
                 ui_healthbar = GameObject.Find("HUD/Health/Bar").transform;
@@ -104,6 +107,9 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         private void Update()
         {
+           
+         
+
            
             if (!photonView.IsMine) return;
 
@@ -179,14 +185,14 @@ namespace Com.Kawaiisun.SimpleHostile
                 movementCounter += Time.deltaTime * 7f;
                 weaponParent.localPosition = Vector3.Lerp(weaponParent.localPosition, targetWeaponBobPosition, Time.deltaTime * 10f);
             }
-            if (Input.GetKeyDown(KeyCode.Tab) && scoreboard == false)
+          /*  if (Input.GetKeyDown(KeyCode.Tab) && scoreboard.activeSelf == false)
             {
-                scoreboard.SetActive(false);
-            } else if(Input.GetKeyDown(KeyCode.Tab) && scoreboard == true)
+                scoreboard.SetActive(true);
+            }  else if(Input.GetKeyDown(KeyCode.Tab) && scoreboard.activeSelf == true)
             {
                 scoreboard.SetActive(false);
             }
-
+            */
            
 
            
@@ -337,11 +343,11 @@ namespace Com.Kawaiisun.SimpleHostile
                 if (current_health <= 0)
                 {
 
-                    Debug.Log("Actor: "+actor);
+                    
                     manager.Spawn();
                   
                     manager.ChangeStat_S(PhotonNetwork.LocalPlayer.ActorNumber, 1, 1);
-                    Debug.Log("dead  "+Launcher.myProfile.username);
+                  
 
                     if (actor >= 0) { manager.ChangeStat_S(actor, 0, 1); }
                     PhotonNetwork.Destroy(gameObject);
