@@ -130,6 +130,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
             if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha1)) { photonView.RPC("Equip", RpcTarget.All, 0); }
             if (photonView.IsMine && Input.GetKeyDown(KeyCode.Alpha2)) { photonView.RPC("Equip", RpcTarget.All, 1); }
+    
             if (currentWeapon != null)
             {
                 if (photonView.IsMine)
@@ -362,7 +363,7 @@ namespace Com.Kawaiisun.SimpleHostile
         IEnumerator Equip(int p_ind)
         {
           
-            if (isEquiping == true || isReloading == true) { yield break; }
+            if (isEquiping == true || isReloading == true || isAming == true) { yield break; }
             
             if (currentWeapon != null)
             {
@@ -373,6 +374,7 @@ namespace Com.Kawaiisun.SimpleHostile
             isEquiping = true;   
             currentIndex = p_ind;
             GameObject t_newWeapon = Instantiate(loadout[p_ind].prefab, weaponParent.position, weaponParent.rotation, weaponParent) as GameObject;
+            
             t_newWeapon.transform.localPosition = Vector3.zero;
             t_newWeapon.transform.localEulerAngles = Vector3.zero;
            
@@ -386,13 +388,45 @@ namespace Com.Kawaiisun.SimpleHostile
 
             currentWeapon = t_newWeapon;
             isEquiping = false;
+            if (loadout[p_ind].name == "Sniper")
+            {
+                if (sniper1.Sniper1 != null)
+                {
+                    sniper1.Sniper1.SetActive(true);
+                }
+            }
         }
         IEnumerator Wait()
         {
             yield return new WaitForSeconds(3);
-            Instantiate(bloon, new Vector3(Random.Range(42,56), Random.Range(-1, 9), 11), Quaternion.identity);
+            Instantiate(bloon, new Vector3(Random.Range(42, 56), Random.Range(-1, 9), 11), Quaternion.identity);
         }
-            void Aim(bool p_isAiming)
+        IEnumerator WaitM()
+        {
+            if (sniper1.Sniper1 != null)
+            {
+                sniper1.Sniper1.SetActive(false);
+            }
+            yield return new WaitForSeconds(.15f);
+            if (sniper1.ScopeOverlay != null)
+            {
+                sniper1.ScopeOverlay.SetActive(true);
+            }
+        }
+        IEnumerator WaitF()
+        {
+             
+            if (sniper1.Sniper1 != null)
+            {
+                sniper1.Sniper1.SetActive(true);
+            }
+            yield return new WaitForSeconds(.15f);
+            if (sniper1.ScopeOverlay != null)
+            {
+                sniper1.ScopeOverlay.SetActive(false);
+            }
+        }
+        void Aim(bool p_isAiming)
         {
             if (isEquiping == true) { return; }
             isAming = p_isAiming;
@@ -403,10 +437,11 @@ namespace Com.Kawaiisun.SimpleHostile
             {
                 t_anchor.position = Vector3.Lerp(t_anchor.position, t_state_ads.position, Time.deltaTime * loadout[currentIndex].aimSpeed);
             }
-            else;
+            else
             {
                 t_anchor.position = Vector3.Lerp(t_anchor.position, t_state_hip.position, Time.deltaTime * loadout[currentIndex].aimSpeed);
             }
+           
         }
 
         [PunRPC]

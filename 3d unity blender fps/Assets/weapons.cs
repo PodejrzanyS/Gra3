@@ -80,7 +80,7 @@ namespace Com.Kawaiisun.SimpleHostile
             // magazynek
             if (photonView.IsMine)
             {
-                weapons.magazynek1 = GameObject.Find("Silancer1");
+                weapons.magazynek1 = GameObject.Find("Magazynek1");
 
                 if (Launcher.Magazynek1.Equals(true))
                 {
@@ -96,7 +96,7 @@ namespace Com.Kawaiisun.SimpleHostile
             else
             {
 
-                weapons.magazynekk1 = GameObject.Find("Silancer1");
+                weapons.magazynekk1 = GameObject.Find("Magazynek1");
                 if (Launcher.Magazynek1.Equals(true))
                 {
                     weapons.magazynekk1.SetActive(true);
