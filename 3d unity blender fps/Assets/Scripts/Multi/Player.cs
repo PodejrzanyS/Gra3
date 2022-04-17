@@ -48,7 +48,8 @@ namespace Com.Kawaiisun.SimpleHostile
        // public static GameObject scoreboard;
         public bool animating = false;
         private Animator anim;
-      //  public static TMP_Text scoreboardt;
+        //  public static TMP_Text scoreboardt;
+        private bool canSlide;
         #endregion
 
         #region Monobehaviour Callback
@@ -57,7 +58,7 @@ namespace Com.Kawaiisun.SimpleHostile
 
         private void Start()
         {
-          
+            canSlide = true;
                 velocity = rig.velocity;
             manager = GameObject.Find("Manager").GetComponent<Manager>();
             weapon = GetComponent<Weapon>();
@@ -222,7 +223,7 @@ namespace Com.Kawaiisun.SimpleHostile
             bool isGrounded = Physics.Raycast(groundDetector.position, Vector3.down, 0.1f, ground);
             bool isJumping = jump && isGrounded;
             bool isSprinting = sprint && t_vmove > 0 && !isJumping && isGrounded;
-            bool isSliding = isSprinting && slide && !sliding;
+            bool isSliding = isSprinting && slide && !sliding && canSlide;
             //movement
             Vector3 t_direction = Vector3.zero;
             float t_adjustedSpeed = speed;
@@ -261,8 +262,11 @@ namespace Com.Kawaiisun.SimpleHostile
                 slide_time -= Time.deltaTime;
                 if (slide_time <= 0)
                 {
+                    
                     sliding = false;
                     weaponParentCurrentPos += Vector3.up * 0.5f;
+                    StartCoroutine(Wait());
+                    
                 }
 
             }
@@ -274,11 +278,13 @@ namespace Com.Kawaiisun.SimpleHostile
             //sliding
             if (isSliding)
             {
+                canSlide = false;
                 sliding = true;
                 slide_dir = t_direction;
                 slide_time = lengthofSlide;
 
                 weaponParentCurrentPos += Vector3.down * 0.5f;
+                
             }
 
             // camera stuff
@@ -330,7 +336,8 @@ namespace Com.Kawaiisun.SimpleHostile
         #region public methods
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
+            canSlide = true;
         }
 
 

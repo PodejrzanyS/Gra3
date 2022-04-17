@@ -154,7 +154,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
   speed: 222
   sprintModifier: 2
   jumpForce: 250
-  slideModifier: 1
+  slideModifier: 3
   max_health: 100
   weaponParent: {fileID: 3581931556254457903}
   groundDetector: {fileID: 3581931556486980224}
@@ -496,7 +496,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rig: {fileID: 3581931556582733820}
-  lengthofSlide: 0.5
+  lengthofSlide: 1
   playerProfile:
     username: DEFAULT USERNAME
     level: 0

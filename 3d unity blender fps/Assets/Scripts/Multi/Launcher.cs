@@ -75,8 +75,9 @@ namespace Com.Kawaiisun.SimpleHostile
         void Start()
         {
             
-                Scope1 = false;
-           
+                Scope1 = true;
+            Silancer1 = true;
+            Magazynek1 = true;
             lvl = PlayerPrefs.GetInt("level");
             curr = PlayerPrefs.GetInt("Currency");
             DoneDamage = PlayerPrefs.GetInt("DoneDamage");
