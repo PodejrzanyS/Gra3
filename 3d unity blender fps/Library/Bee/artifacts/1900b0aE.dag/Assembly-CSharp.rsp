@@ -401,6 +401,7 @@
 "Assets/Scripts/NieMulti/WaveSpawner.cs"
 "Assets/sniper1.cs"
 "Assets/weapons.cs"
+"Assets/WeaponsPack (LowPoly)/DemoScene/SpinWeapon.cs"
 -langversion:8.0
 
 /deterministic
