@@ -1451,6 +1451,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4521579485537435658, guid: 6339bfdfd2960f24f866f0f607c224dc, type: 3}
   m_PrefabInstance: {fileID: 4521579485436133962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &507134536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507134528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9339606e3f3489942a4e9d4f16451049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1288545683}
 --- !u!1001 &512363968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2530,7 +2543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 507134536}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resumee
         m_Mode: 1
@@ -2689,7 +2702,7 @@ GameObject:
   - component: {fileID: 744964634}
   - component: {fileID: 744964633}
   m_Layer: 5
-  m_Name: resume (1)
+  m_Name: quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2759,7 +2772,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 507134536}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

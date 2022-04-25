@@ -43,7 +43,8 @@ public class HealthDrzewo : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(this.gameObject); 
+        Destroy(this.gameObject);
+        Application.Quit();
     }
     void OnCollisionEnter(Collision other)
     {
