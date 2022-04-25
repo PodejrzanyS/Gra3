@@ -214,9 +214,9 @@ namespace Com.Kawaiisun.SimpleHostile
         public void BuyScope1()
         {
            
-                if (curr >= 300 && lvl >= 4 && Scope1 == false)
+                if (curr >= 1 && lvl >= 1 && Scope1 == false)
                 {
-                    curr -= 300;
+                    curr -= 1;
                     PlayerPrefs.SetInt("Currency", curr);
                     PlayerPrefs.Save();
                 Scope1 = true;
@@ -241,9 +241,9 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         public void BuySilancer1()
         {
-            if (curr >= 500 && lvl >= 5 && Silancer1 == false)
+            if (curr >= 1 && lvl >= 1 && Silancer1 == false)
             {
-                curr -= 200;
+                curr -= 1;
                 PlayerPrefs.SetInt("Currency", curr);
                 PlayerPrefs.Save();
                 Silancer1 = true;
@@ -267,9 +267,9 @@ namespace Com.Kawaiisun.SimpleHostile
         }
         public void BuyMagazynek1()
         {
-            if (curr >= 600 && lvl >= 7 && Magazynek1 == false)
+            if (curr >= 1 && lvl >= 1 && Magazynek1 == false)
             {
-                curr -= 600;
+                curr -= 1;
                 PlayerPrefs.SetInt("Currency", curr);
                 PlayerPrefs.Save();
                 Magazynek1 = true;
