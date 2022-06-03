@@ -25,9 +25,6 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    /*public GameObject pauseMeni;
-    bool zapauzowano = false;*/
-
     void Start()
     {
  
@@ -35,23 +32,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-
-        /*if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (zapauzowano)
-            {
-                pauseMeni.active = false;
-                Time.timeScale = 1;
-            }
-            else
-            {
-                pauseMeni.active = true;
-                Time.timeScale = 0;
-            }
-            zapauzowano = !zapauzowano;
-        }*/
-
-
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
